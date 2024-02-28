@@ -55,17 +55,7 @@
     font-weight: bold;
   }
 
-  .texthold1 {
-    width: 400px;
-    height: 254px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #88703b,
-               -15px -15px 30px #684c29;
-    position: center;
-    margin-left: calc(1% + 9rem);
-    margin-top: calc(8% + 0.5rem);
-}
+  
 
 body {
     background-image: url(Designer.png);
@@ -93,4 +83,25 @@ body {
     column-gap: 5em;
     row-gap: 8em;
     
+}
+
+
+.texthold1 {
+  width: 400px;
+  height: 254px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #88703b,
+             -15px -15px 30px #684c29;
+  position: relative; /* use relative positioning */
+  margin: 8% auto 0; /* margins for centering */
+  text-align: center; /* content horizontally */
+  overflow: hidden; /* hidee overflowing content */
+}
+
+.texthold1 img {
+  width: 100%; /*  fills the container's width */
+  height: 100%; /*  fills the container's height */
+  object-fit: cover; /* aspect ratio and cover the container */
+  border-radius: 30px; /* border-radius to match the container */
 }
