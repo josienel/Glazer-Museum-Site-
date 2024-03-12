@@ -1,0 +1,89 @@
+<!--No Background-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="plactslctSTYLE.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Nabla&family=Protest+Revolution&family=Protest+Riot&display=swap" rel="stylesheet">
+
+    <title>Exhibits</title>
+
+
+</head>
+<body>
+<div class="background">
+  <header>
+      <div class="mcard">
+        <div class="header-content">
+          <h1 class="maint">Play Types</h1>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Help</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+  <main>
+    <div class="group-container">
+        <div class="card">
+            
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Adventure</h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Risky</h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Solitary </h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Artistic</h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Object <n> Driven</h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Fantasy</h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Communication</h1></div>
+        </div>
+        <div class="card">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="card-inner"><h1>Dramatic</h1></div>
+        </div>
+
+        <!-- Repeat the card structure for other cards -->
+        <!-- Make sure to customize the content and styles within each card -->
+    </div>
+        
+    
+    <script src="script.js"></script>
+     
+  
+  </main> <!--main close-->
+  
+
+</body> <!--body ends-->
+</div>
+</html>
