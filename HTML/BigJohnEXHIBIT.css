@@ -58,7 +58,7 @@
   
 
 body {
-    background-image: url(Designer.png);
+    background-image: url(Designer.png); /* make sure to import background photo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -81,7 +81,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5em;
-    row-gap: 8em;
+    row-gap: 0.1em;
     
 }
 
@@ -93,15 +93,26 @@ body {
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #88703b,
              -15px -15px 30px #684c29;
-  position: relative; /* use relative positioning */
-  margin: 8% auto 0; /* margins for centering */
-  text-align: center; /* content horizontally */
-  overflow: hidden; /* hidee overflowing content */
+  position: relative; /* Use relative positioning */
+  margin: 8% auto 0; /* Adjust margins for centering */
+  text-align: center; /* Center the content horizontally */
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .texthold1 img {
-  width: 100%; /*  fills the container's width */
-  height: 100%; /*  fills the container's height */
-  object-fit: cover; /* aspect ratio and cover the container */
-  border-radius: 30px; /* border-radius to match the container */
+  width: 100%; /* Ensure the image fills the container's width */
+  height: 100%; /* Ensure the image fills the container's height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 30px; /* Apply border-radius to match the container */
+}
+
+.Base3 {
+  width: 480px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
+  height: 200px;
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  position: center;
+  margin-bottom: 12%;
+  margin-left: 10%;
 }
