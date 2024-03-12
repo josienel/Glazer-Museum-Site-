@@ -1,0 +1,81 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-image: url('{% static "images/homebackground.jpeg" %}');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .test{
+            top: 30px;
+            left: 0%;
+            position: absolute;
+            background-color: rgb(159, 0, 221);
+            text-align: center;
+            width: 100%;
+        }
+
+        #banner_text{
+            color: white;
+        }
+
+        #selection_text{
+            color: white;
+            margin-top: 3%; 
+        }
+
+        .selection{
+            background-color: rgb(159, 0, 221);
+            position: absolute;
+            height: 500px;
+            width: 300px;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            border-radius: 50px;
+            margin-top: 250px;
+        }
+
+        .Play, .Exhibits, .Calender, .Progress, .Account, .Help {
+            background-color: rgb(59, 187, 209);
+            position: absolute;
+            width: 250px;
+            height: 10%;
+            left: 50%;
+            border-radius: 50px;
+            text-align: center;
+            transform: translate(-50%,0);
+        }
+
+        .Play { top: 5%; }
+        .Exhibits { top: 20%; }
+        .Calender { top: 35%; }
+        .Progress { top: 50%; }
+        .Account { top: 65%; }
+        .Help { top: 80%; }
+    </style>
+    <head>
+        <div class="test"><h1 id="banner_text">Glazer Children's Museum</h1></div>
+    </head>
+    <body>
+        <div class="selection">
+            <a href="{% url 'play' %}" class="Play"><h1 id="selection_text">Play</h1></a>
+            <a href="{% url 'exhibits' %}" class="Exhibits"><h1 id="selection_text">Exhibits</h1></a>
+            <a href="{% url 'calendar' %}" class="Calender"><h1 id="selection_text">Calendar</h1></a>
+            <a href="{% url 'progress' %}" class="Progress"><h1 id="selection_text">Progress</h1></a>
+            <a href="{% url 'account' %}" class="Account"><h1 id="selection_text">Account</h1></a>
+            <a href="{% url 'help' %}" class="Help"><h1 id="selection_text">Help</h1></a>
+        </div>
+    </body>
+</html>
+{% endblock %}
