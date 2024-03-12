@@ -1,0 +1,145 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}Exhibits{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big John Exhibit</title>
+    <style>
+        /* CSS styles here */
+        .protest-riot-regular {
+            font-family: "Protest Riot", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .card {
+            width: 70rem;
+            box-sizing: content-box;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 1rem;
+            position: relative;
+            background-color: rgb(139, 69, 19); /* Brown color for the prehistoric theme */
+            background-image: linear-gradient(43deg, #8B4513 0%, #7B5728 15%, #3B5323 30%, #0A361E 50%, #3B5323 70%, #7B5728 85%, #8B4513 100%);
+            /* Adjusted gradient with more natural-looking tones */
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            text-align: center;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            padding: 10px; /* Add padding for space around content */
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column; /* Arrange content vertically */
+            align-items: center; /* Center horizontally */
+            /* Come back and change for other screens */
+        }
+
+        .maintitle {
+            font-family: "Protest Riot", sans-serif;
+            font-size: 6rem;
+            color: #dcedec;
+            margin-bottom: 20px; /* Add space between text and links */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e4df;
+            font-weight: bold;
+        }
+
+        body {
+            background-image: url(Designer.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .Base2 {
+            width: 600px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
+            height: 300px;
+            border-radius: 30px;
+            background: lightgrey;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+            position: center;
+            margin-left: calc(2% + 0.53rem);
+            margin-top: calc(20% + 0.5rem);
+        }
+
+        .maininf {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5em;
+            row-gap: 8em;
+        }
+
+        .texthold1 {
+            width: 400px;
+            height: 254px;
+            border-radius: 30px;
+            background: #e0e0e0;
+            box-shadow: 15px 15px 30px #88703b,
+                        -15px -15px 30px #684c29;
+            position: relative; /* use relative positioning */
+            margin: 8% auto 0; /* margins for centering */
+            text-align: center; /* content horizontally */
+            overflow: hidden; /* hidee overflowing content */
+        }
+
+        .texthold1 img {
+            width: 100%; /*  fills the container's width */
+            height: 100%; /*  fills the container's height */
+            object-fit: cover; /* aspect ratio and cover the container */
+            border-radius: 30px; /* border-radius to match the container */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="card">
+            <div class="header-content">
+                <h1 class="maintitle">Big John</h1>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'help' %}">Help</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="maininf">
+            <div class="texthold1">
+                <img src="bigj.jpg" alt="Big John">
+            </div>
+            <div class="Base2">
+                <div class="content">
+                    <h2 class="title">Exhibit Info:</h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis magna quis lectus fermentum, quis scelerisque orci pellentesque. Duis id porta justo. Sed ac enim id justo tincidunt hendrerit id ac lectus. Pellentesque maximus posuere tortor vitae consequat.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+{% endblock %}

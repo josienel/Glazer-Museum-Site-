@@ -1,0 +1,25 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+Help
+{% endblock %}
+{% block content %}
+<style>
+    .test {
+        top: 30px;
+        left: 0%;
+        position: absolute;
+        background-color: rgb(159, 0, 221);
+        text-align: center;
+        width: 100%;
+    }
+
+    #banner_text {
+        color: white;
+    }
+</style>
+
+<div class="test">
+    <h1 id="banner_text">Glazer Children's Museum</h1>
+</div>
+
+{% endblock %}
