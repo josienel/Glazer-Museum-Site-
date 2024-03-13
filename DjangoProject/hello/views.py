@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
+from .forms import ContactForm
 
 def home(request):
     return render(request, "hello/home.html")
@@ -55,8 +56,18 @@ def about(request):
 
 #Contact
 def contact(request):
-    #return redirect('https://glazermuseum.org/contact/')
-    return render(request, "hello/contact.html")
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Process the form data (you can add your own logic here)
+            # For demonstration purposes, we'll just print the form data
+            print(form.cleaned_data)
+            # Redirect to a success page
+            return redirect('contactsent')
+    else:
+        form = ContactForm()
+    return render(request, 'hello/contact.html', {'form': form})
+
 
 #Exhibits
 def exhibits(request):
@@ -76,8 +87,5 @@ def account(request):
 
 #Help
 def help(request):
-    return render(request, 'hello/contact.html')
+    return render(request, 'hello/help.html')
 
-#Contact message sent/recieved
-def contactsent(request):
-    return render(request, 'hello/contactsent.html')

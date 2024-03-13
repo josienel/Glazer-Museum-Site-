@@ -14,6 +14,35 @@
     <a href="{% url 'contact' %}" class="navbar-item">Contact</a>
 </div>
 
+<style>
+    .test {
+        top: 30px;
+        left: 0%;
+        position: absolute;
+        background-color: rgb(159, 0, 221);
+        text-align: center;
+        width: 100%;
+    }
+
+    #banner_text {
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(243, 243, 243);
+            text-align: center;
+            z-index: 1; /* Ensure the footer is above other elements */
+        }
+</style>
+
+<div class="test">
+    <h1 id="banner_text">Glazer Children's Museum</h1>
+</div>
+
 <div class="body-content">
     {% block content %}
     {% endblock %}
