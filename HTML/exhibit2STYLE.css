@@ -1,0 +1,125 @@
+.protest-riot-regular {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.scope-one-regular {
+    font-family: "Scope One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.card {
+    width: 70rem;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    position: relative;
+    background-color: rgb(238, 236, 236); /* Brown color for the prehistoric theme */
+    background-image: linear-gradient(43deg, #efeeec 0%, #efe7dd 15%, #dfe5da 30%, #f5f6f5 50%, #c3c3c2 70%, #f4ebdf 85%, #eee8e3 100%);
+    /* Adjusted gradient with more natural-looking tones */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Add padding for space around content */
+}
+
+
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center horizontally */
+    /* Come back and change for other screens */
+  }
+  
+  .maintitle {
+    font-family: "Scope One", serif;
+    font-size: 6rem;
+    font-weight: bolder;
+    color: #00655f;
+    margin-bottom: 20px; /* Add space between text and links */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    
+  }
+
+  
+
+body {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+        
+
+
+        
+      }
+.Base2 {
+  width: 600px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
+  height: 354px;
+  border-radius: 30px;
+  background: rgb(238, 236, 236);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  position: center;
+  margin-left: calc(2% + 0.53rem);
+  margin-top: calc(20% + 0.5rem);
+}
+.maininf {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5em;
+    row-gap: 0.1em;
+    
+}
+
+
+.texthold1 {
+  width: 400px;
+  height: 254px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bab9b7,
+             -15px -15px 30px #ecebe9;
+  position: relative; /* Use relative positioning */
+  margin: 8% auto 0; /* Adjust margins for centering */
+  text-align: center; /* Center the content horizontally */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.texthold1 img {
+  width: 100%; /* Ensure the image fills the container's width */
+  height: 100%; /* Ensure the image fills the container's height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 30px; /* Apply border-radius to match the container */
+}
+
+.Base3 {
+  width: 480px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
+  height: 200px;
+  border-radius: 30px;
+  background: rgb(238, 236, 236);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  position: center;
+  margin-bottom: 12%;
+  margin-left: 10%;
+}
