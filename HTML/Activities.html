@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      overflow-x: hidden;
+      overflow: overlay;
+    }
+
+    .scroll-container {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 30%;
+      left: 50%;
+      height: 35%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container2 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 80%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container3 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 130%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container4 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 180%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container5 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 230%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-item {
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    }
+
+
+    .card {
+    width: 70%;
+    height: 15%;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    position: absolute;
+    background-color: #6fca07; /* Brown color for the prehistoric theme */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding:0 ; /* Add padding for space around content */
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+    .title1{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%,0);
+      color: white;
+      
+    }
+    .title2{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 75%;
+      white-space: nowrap;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    .title3{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 125%;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    .title4{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 175%;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    .title5{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 225%;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    body{
+            background-color: white;
+        }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+#section1 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #8ed1fc;
+    left: 0;
+    top: 20%
+    
+}
+#section2 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(22, 170, 249);
+    left: 0;
+    top: 70%
+}
+#section3 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(0, 90, 138);
+    left: 0;
+    top: 120%
+}
+#section4 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #8e4bcc;
+    left: 0;
+    top: 170%
+}
+#section5 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(255, 182, 193);
+    left: 0;
+    top: 220%
+}
+  </style>
+  <div class="card">Activities</div>
+</head>
+<body>
+<div id="section1"></div>
+<div id="section2"></div>
+<div id="section3"></div>
+<div id="section4"></div>
+<div id="section5"></div>
+<div class="title1">Physical</div>
+<div class="scroll-container" id="scrollContainer">
+  <div class="scroll-item">Item 1</div>
+  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item">Item 4</div>
+  <div class="scroll-item">Item 5</div>
+  <div class="scroll-item">Item 6</div>
+  
+</div>
+<div class="title2">Social-Emotional</div>
+<div class="scroll-container2" id="scrollContainer2">
+  <div class="scroll-item">Item 1</div>
+  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item">Item 4</div>
+  <div class="scroll-item">Item 5</div>
+  <div class="scroll-item">Item 6</div>
+  
+</div>
+<div class="title3">Sensory</div>
+<div class="scroll-container3" id="scrollContainer3">
+  <div class="scroll-item">Item 1</div>
+  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item">Item 4</div>
+  <div class="scroll-item">Item 5</div>
+  <div class="scroll-item">Item 6</div>
+  
+</div>
+<div class="title4">Cognitive</div>
+<div class="scroll-container4" id="scrollContainer4">
+  <div class="scroll-item">Item 1</div>
+  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item">Item 4</div>
+  <div class="scroll-item">Item 5</div>
+  <div class="scroll-item">Item 6</div>
+  
+</div>
+<div class="title5">Communication</div>
+<div class="scroll-container5" id="scrollContainer5">
+  <div class="scroll-item">Item 1</div>
+  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item">Item 4</div>
+  <div class="scroll-item">Item 5</div>
+  <div class="scroll-item">Item 6</div>
+  
+</div>
+
+<script>
+  var container = document.getElementById('scrollContainer');
+
+  container.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container.scrollLeft += event.deltaY;
+    }
+  });
+  var container2 = document.getElementById('scrollContainer2');
+
+  container2.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container2.scrollLeft += event.deltaY;
+    }
+  });
+  var container3 = document.getElementById('scrollContainer3');
+
+  container3.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container3.scrollLeft += event.deltaY;
+    }
+  });
+  var container4 = document.getElementById('scrollContainer4');
+
+  container4.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container4.scrollLeft += event.deltaY;
+    }
+  });
+  var container5 = document.getElementById('scrollContainer5');
+
+  container5.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container5.scrollLeft += event.deltaY;
+    }
+  });
+  
+</script>
+
+</body>
+</html>
