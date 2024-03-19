@@ -93,6 +93,7 @@ body {
 }
 
 
+  
 .texthold1 {
   width: 400px;
   height: 254px;
@@ -123,3 +124,50 @@ body {
   margin-bottom: 12%;
   margin-left: 10%;
 }
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .card {
+      width: 90%; /* Adjust width to a percentage */
+    }
+    
+    .Base2 {
+      width: 90%; /* Adjust width to a percentage */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .maininf {
+      grid-template-columns: 1fr; /* Change to a single column layout */
+      column-gap: 0; /* Remove the gap between columns */
+      row-gap: 2em; /* Add some space between rows */
+    }
+  
+    .texthold1 {
+      width: 90%; /* Adjust width to a percentage */
+      height: auto; /* Let the height adjust automatically */
+      margin-top: 5%; /* Adjust margin from top */
+    }
+    .maintitle {
+        font-size: 4rem;
+        
+      }
+  
+    .Base3 {
+      width: 90%; /* Adjust width to a percentage */
+      margin: 0 auto; /* Center horizontally */
+      margin-bottom: 5%; /* Adjust margin from bottom */
+    }
+  }
+  
+  /* Additional adjustments for even smaller screens */
+  @media only screen and (max-width: 480px) {
+    .card {
+      padding: 5px; /* Adjust padding */
+    }
+  
+    .Base2 {
+      margin-top: 10%; /* Further adjust margin from top */
+    }
+  }
+  
