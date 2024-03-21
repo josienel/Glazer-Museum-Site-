@@ -39,13 +39,13 @@
     font-family: "Scope One", serif;
     font-size: 6rem;
     font-weight: bolder;
-    color: #00655f;
+    color: #24b0bd;
     margin-bottom: 20px; /* Add space between text and links */
   }
   
   nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 12;
     margin: 0;
   }
   
@@ -58,6 +58,7 @@
     text-decoration: none;
     color: #000000;
     font-weight: bold;
+    font-size: 25px;
     
   }
 
@@ -82,6 +83,10 @@ body {
   position: center;
   margin-left: calc(2% + 0.53rem);
   margin-top: calc(20% + 0.5rem);
+  
+}
+.Base2 h2{
+  text-align: center;
 }
 .maininf {
     display: grid;
@@ -122,6 +127,9 @@ body {
   position: center;
   margin-bottom: 12%;
   margin-left: 10%;
+  flex-direction: column; /* Arrange content vertically */
+  align-items: center;
+  text-align: center;
 }
 
 /* Adjustments for smaller screens */
@@ -168,5 +176,32 @@ body {
     .Base2 {
       margin-top: 10%; /* Further adjust margin from top */
     }
+    
   }
   
+  .btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #13b0be 0%, #24b0bd 100%);
+    box-shadow: 0 20px 30px -6px #0e0e0e;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  .btn:active {
+    opacity: 0.5;
+  }
