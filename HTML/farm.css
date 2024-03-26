@@ -63,8 +63,8 @@
 
   
 
-body {
-    background-color: #ffffff;
+  body {
+    background-image: url(farmbckd.png); /* make sure to import background photo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
