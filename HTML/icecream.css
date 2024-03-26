@@ -164,6 +164,7 @@
       width: 90%; /* Adjust width to a percentage */
       margin: 0 auto; /* Center horizontally */
       margin-bottom: 5%; /* Adjust margin from bottom */
+      padding-bottom: 3%;
     }
   }
   
