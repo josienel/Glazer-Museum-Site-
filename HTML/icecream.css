@@ -9,6 +9,7 @@
     font-style: normal;
   }
   
+
 .card {
     width: 70rem;
     box-sizing: content-box;
@@ -63,8 +64,8 @@
 
   
 
-body {
-    background-color: #ffffff;
+  body {
+    background-image: url(ICEbckrnd.png); /* make sure to import background photo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
