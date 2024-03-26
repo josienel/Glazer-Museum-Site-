@@ -64,10 +64,11 @@
   
 
   body {
-    background-image: url(farmbckd.png); /* make sure to import background photo */
+    background-image: url(farmbck.png); /* make sure to import background photo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
         
 
 
@@ -102,8 +103,7 @@
   height: 254px;
   border-radius: 30px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bab9b7,
-             -15px -15px 30px #ecebe9;
+  
   position: relative; /* Use relative positioning */
   margin: 8% auto 0; /* Adjust margins for centering */
   text-align: center; /* Center the content horizontally */
