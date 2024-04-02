@@ -134,39 +134,64 @@
 
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
-    .card {
-      width: 90%; /* Adjust width to a percentage */
-    }
-    
-    .Base2 {
-      width: 90%; /* Adjust width to a percentage */
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .maininf {
-      grid-template-columns: 1fr; /* Change to a single column layout */
-      column-gap: 0; /* Remove the gap between columns */
-      row-gap: 2em; /* Add some space between rows */
-    }
-  
-    .texthold1 {
-      width: 90%; /* Adjust width to a percentage */
-      height: auto; /* Let the height adjust automatically */
-      margin-top: 5%; /* Adjust margin from top */
-    }
-    .maintitle {
-        font-size: 4rem;
-        
-      }
-  
-    .Base3 {
-      width: 90%; /* Adjust width to a percentage */
-      margin: 0 auto; /* Center horizontally */
-      margin-bottom: 5%; /* Adjust margin from bottom */
-      padding-bottom: 3%;
-    }
+  .card {
+    width: 90%; /* Adjust width to a percentage */
   }
+  
+  .Base2 {
+    width: 90%; /* Adjust width to a percentage */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .maininf {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    column-gap: 0; /* Remove the gap between columns */
+    row-gap: 2em; /* Add some space between rows */
+  }
+
+  .texthold1 {
+    width: 90%; /* Adjust width to a percentage */
+    height: auto; /* Let the height adjust automatically */
+    margin-top: 5%; /* Adjust margin from top */
+  }
+  
+  .maintitle {
+    font-size: 4rem;
+  }
+
+  .Base3 {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+    display: contents; /* Add display property */
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center;/* Center buttons horizontally */
+  }
+  .playTITLE h1 {
+    font-size: 12px;
+    color: black;
+    font-weight: 200;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: #ecebe9;
+  }
+  
+  .Base3 .toPLAY {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+  }
+  
+  .Base3 .toPLAY .btn {
+    margin: 10px 0; /* Add margin between the buttons */
+  }
+}
+
   
   /* Additional adjustments for even smaller screens */
   @media only screen and (max-width: 480px) {
@@ -176,6 +201,12 @@
   
     .Base2 {
       margin-top: 10%; /* Further adjust margin from top */
+    }
+    .Base3 {
+      width: 90%; /* Adjust width to a percentage */
+      margin: 0 auto; /* Center horizontally */
+      margin-bottom: 5%;
+      padding-bottom: 3%; /* Adjust margin from bottom */
     }
     
   }
