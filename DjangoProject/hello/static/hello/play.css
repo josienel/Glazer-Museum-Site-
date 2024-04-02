@@ -1,0 +1,160 @@
+.protest-riot-regular {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  
+
+.card {
+    width: 70rem;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    position: relative;
+    background-color: #8B4513; /* Brown color for the prehistoric theme */
+    background-image: linear-gradient(#e66465, #9198e5);
+    /* Adjusted gradient with more natural-looking tones */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Add padding for space around content */
+}
+
+
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center horizontally */
+    /* Come back and change for other screens */
+    font-family: "Madimi One", sans-serif;
+  }
+  
+  .maintitle {
+    font-family: "Protest Riot", sans-serif;
+    font-size: 6rem;
+    color: #dcedec;
+    margin-bottom: 20px; /* Add space between text and links */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 12px;
+    margin: 1px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #e0e4df;
+    font-weight: bold;
+  }
+
+  
+
+body {
+    background-image: url(bckndPLAY1.png); /* make sure to import background photo */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+        
+
+
+        
+      }
+      .Base2 {
+        width: 600px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
+        height: 354px;
+        border-radius: 30px;
+        background: linear-gradient(#5c5ab4,#9198e5,#060242);
+        box-shadow: #9198e5 0px 30px 50px -12px inset, #e66465 0px 18px 26px -18px inset;
+        position: absolute; /* Changed to position right */
+        margin-left: calc(50% + 0.53rem); /* Changed margin-left */
+        margin-top: calc(15% + 0.5rem);
+        text-align: left;
+      }
+      
+      .title {
+        color: white;
+        margin-left: 10px;
+        font-family: "Madimi One", sans-serif;
+        font-size: 2rem ;
+        
+      }
+
+      .description {
+        font-family: "Madimi One", sans-serif;
+        margin-left: 12px;
+        color: white;
+      }
+
+   
+      .texthold1 {
+        width: 400px;
+        height: 254px;
+        border-radius: 30px;
+        background: linear-gradient(#060242,#9198e5,#e95a5a);
+        box-shadow: 15px 15px 30px #e66465, -15px -15px 30px #9198e5;
+        position: relative; /* Use relative positioning */
+        margin: 8% auto 0; /* Adjust margins for centering */
+        text-align: center; /* Center the content horizontally */
+        overflow: hidden; /* Hide overflowing content */
+      }
+      
+      .txthldTTL {
+        font-family: "Madimi One", sans-serif;
+        color: rgb(230, 227, 227);
+      }
+      
+      
+      .maininf {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5em;
+        row-gap: 8em;
+        direction: ltr; /* Right to left layout */
+      }
+    .lnktoEXH {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-template-rows: repeat(3, auto); /* Three rows */
+      gap: 1em;
+      justify-items: center;
+      margin-top: 2em;
+  }
+  
+ 
+  
+  
+
+  .link button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+  
+    .link button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
