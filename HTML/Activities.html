@@ -162,9 +162,6 @@
       transform: translate(-50%,0);
       color: white;
     }
-    body{
-      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Night_View_Glazer_Children%27s_Museum.jpg/1200px-Night_View_Glazer_Children%27s_Museum.jpg");
-        }
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -241,8 +238,25 @@
         left: 5%;
         top: 50%;
         transform: translate( 0,-48%);
-      
 }
+#card_titles{
+  font-size: 35pt;
+  text-wrap: wrap;
+}
+.bckgrnd{
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  position: absolute;
+  z-index: -1;
+}
+.bckgrnd img{
+  width: 100%;
+  height: 100%;
+}
+
   </style>
   <div class="card">Activities
     <div class="play_heading">
@@ -252,6 +266,7 @@
   </div>
 </head>
 <body>
+<div class="bckgrnd"> <img src="msue.jpg" alt="msue"></div>
 <div id="section1"></div>
 <div id="section2"></div>
 <div id="section3"></div>
@@ -259,8 +274,8 @@
 <div id="section5"></div>
 <div class="title1">Physical</div>
 <div class="scroll-container" id="scrollContainer">
-  <div class="scroll-item">Item 1</div>
-  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item"><h1 id="card_titles">Dancing</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Legos</h1></div>
   <div class="scroll-item">Item 3</div>
   <div class="scroll-item">Item 4</div>
   <div class="scroll-item">Item 5</div>
@@ -269,9 +284,9 @@
 </div>
 <div class="title2">Social-Emotional</div>
 <div class="scroll-container2" id="scrollContainer2">
-  <div class="scroll-item">Item 1</div>
-  <div class="scroll-item">Item 2</div>
-  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item"><h1 id="card_titles">Strategy Games</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Emapthy<br><br></h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Turn Based Games</h1></div>
   <div class="scroll-item">Item 4</div>
   <div class="scroll-item">Item 5</div>
   <div class="scroll-item">Item 6</div>
@@ -279,7 +294,7 @@
 </div>
 <div class="title3">Sensory</div>
 <div class="scroll-container3" id="scrollContainer3">
-  <div class="scroll-item">Item 1</div>
+  <div class="scroll-item"><h1 id="card_titles">Finger Painting</h1></div>
   <div class="scroll-item">Item 2</div>
   <div class="scroll-item">Item 3</div>
   <div class="scroll-item">Item 4</div>
@@ -289,9 +304,9 @@
 </div>
 <div class="title4">Cognitive</div>
 <div class="scroll-container4" id="scrollContainer4">
-  <div class="scroll-item">Item 1</div>
-  <div class="scroll-item">Item 2</div>
-  <div class="scroll-item">Item 3</div>
+  <div class="scroll-item"><h1 id="card_titles">Sorting<br><br></h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Talk about their Day</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Build using Instructions</h1></div>
   <div class="scroll-item">Item 4</div>
   <div class="scroll-item">Item 5</div>
   <div class="scroll-item">Item 6</div>
@@ -299,8 +314,8 @@
 </div>
 <div class="title5">Communication</div>
 <div class="scroll-container5" id="scrollContainer5">
-  <div class="scroll-item">Item 1</div>
-  <div class="scroll-item">Item 2</div>
+  <div class="scroll-item"><h1 id="card_titles">Creating Rhyms</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Think of metaphores</h1></div>
   <div class="scroll-item">Item 3</div>
   <div class="scroll-item">Item 4</div>
   <div class="scroll-item">Item 5</div>
