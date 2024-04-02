@@ -39,7 +39,7 @@
     font-family: "Scope One", serif;
     font-size: 6rem;
     font-weight: bolder;
-    color: #871f05;
+    color: #9b351c;
     margin-bottom: 20px; /* Add space between text and links */
   }
   
@@ -94,7 +94,13 @@ body {
     row-gap: 0.1em;
     
 }
-
+body {
+  background-image: url(firehousebckrnd.png); /* make sure to import background photo */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+    }
 
   
 .texthold1 {
@@ -187,7 +193,7 @@ body {
     width: 150px;
     height: 60px;
     border-radius: 50px;
-    background-image: linear-gradient(135deg, #13b0be 0%, #24b0bd 100%);
+    background-image: linear-gradient(135deg, #dd4319 0%, #e42d04 100%);
     box-shadow: 0 20px 30px -6px #0e0e0e;
     outline: none;
     cursor: pointer;
