@@ -63,16 +63,15 @@
 
   
 
-body {
-    background-color: #ffffff;
+  body {
+    background-image: url(journeyBCKGRND.png); /* make sure to import background photo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-        
-
-
-        
+    background-position: center;
+    background-blend-mode: white, 80%;
       }
+
 .Base2 {
   width: 600px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
   height: 354px;
@@ -171,10 +170,10 @@ body {
   .playTITLE h1 {
     font-size: 12px;
     color: black;
-    font-weight: 200;
     align-items: center;
     flex-direction: column;
-    text-shadow: #ecebe9;
+    text-shadow: 15px 15px 30px #0de10d,
+    -15px -15px 30px #ecebe9;
   }
   
   .Base3 .toPLAY {
@@ -201,6 +200,7 @@ body {
     .Base2 {
       margin-top: 10%; /* Further adjust margin from top */
     }
+
     .Base3 {
       width: 90%; /* Adjust width to a percentage */
       margin: 0 auto; /* Center horizontally */
