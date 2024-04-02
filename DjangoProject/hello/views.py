@@ -85,7 +85,6 @@ def help(request):
 #Play select
 def playselect(request):
     return render(request, 'hello/playselect.html')
-
 #8 Cards on playselect page
 def adventure(request):
     return render(request, 'hello/adventure.html')
