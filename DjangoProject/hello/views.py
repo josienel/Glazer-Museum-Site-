@@ -7,12 +7,9 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 
+#Home page
 def home(request):
     return render(request, "hello/home.html")
-def about(request):
-    return render(request, "hello/about.html")
-def contact(request):
-    return render(request, "hello/contact.html")
 
 #Hello there
 def hello_there(request, name):
@@ -50,32 +47,28 @@ def help(request):
 def home(request):
     return render(request, "hello/home.html")
 
-#About
-def about(request):
-    return render(request, "hello/about.html")
-
 #Contact
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # Process the form data (you can add your own logic here)
-            # For demonstration purposes, we'll just print the form data
-            print(form.cleaned_data)
-            # Redirect to a success page
+            # Process the form data here (e.g., save it to the database)
+
+            # Redirect to the 'contactsent' URL name
             return redirect('contactsent')
     else:
         form = ContactForm()
     return render(request, 'hello/contact.html', {'form': form})
 
 
+#Contact Sent
+def contactsent(request):
+    return render(request, 'hello/contactsent.html')
+
+
 #Exhibits
 def exhibits(request):
     return render(request, 'hello/exhibits.html')
-
-#Calendar
-def calendar(request):
-    return redirect('https://glazermuseum.org/signatureevents/')
 
 #Progress
 def progress(request):
@@ -89,3 +82,33 @@ def account(request):
 def help(request):
     return render(request, 'hello/help.html')
 
+#Play select
+def playselect(request):
+    return render(request, 'hello/playselect.html')
+
+#8 Cards on playselect page
+def adventure(request):
+    return render(request, 'hello/adventure.html')
+def risky(request):
+    return render(request, 'hello/risky.html')
+def solitary(request):
+    return render(request, 'hello/solitary.html')
+def artistic(request):
+    return render(request, 'hello/artistic.html')
+def objectdriven(request):
+    return render(request, 'hello/objectdriven.html')
+def fantasy(request):
+    return render(request, 'hello/fantasy.html')
+def communication(request):
+    return render(request, 'hello/communication.html')
+def dramatic(request):
+    return render(request, 'hello/dramatic.html')
+
+
+#External Links
+#Calendar
+def calendar(request):
+    return redirect('https://glazermuseum.org/signatureevents/')
+#About
+def about(request):
+    return redirect('https://glazermuseum.org/deai/')

@@ -1,0 +1,98 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}
+Play
+{% endblock %}
+{% block content %}
+<!--No Background-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'hello/playselect.css' %}">
+    <script src="{% static 'hello/playselect.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Nabla&family=Protest+Revolution&family=Protest+Riot&display=swap" rel="stylesheet">
+    <title>Exhibits</title>
+</head>
+<body>
+<div class="background">
+  <header>
+      <div class="mcard">
+        <div class="header-content">
+          <h1 class="maint">Play Types</h1>
+          <nav>
+            <ul>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+  <main>
+    <div class="group-container">
+        <!-- Wrap each card with an <a> tag linking to the desired URL -->
+        <a href="/adventure" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Adventure</h1></div>
+            </div>
+        </a>
+        <a href="/risky" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Risky</h1></div>
+            </div>
+        </a>
+        <a href="/solitary" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Solitary</h1></div>
+            </div>
+        </a>
+        <a href="/artistic" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Artistic</h1></div>
+            </div>
+        </a>
+        <a href="/object-driven" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Object Driven</h1></div>
+            </div>
+        </a>
+        <a href="/fantasy" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Fantasy</h1></div>
+            </div>
+        </a>
+        <a href="/communication" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Communication</h1></div>
+            </div>
+        </a>
+        <a href="/dramatic" class="card-link">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="card-inner"><h1>Dramatic</h1></div>
+            </div>
+        </a>
+    </div>
+    <script src="script.js"></script>
+  </main> 
+</body>
+</div>
+</html>
+{% endblock %}
