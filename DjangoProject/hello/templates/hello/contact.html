@@ -10,7 +10,7 @@ Contact us
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Glazer Children's Museum</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Ensure this path matches your static files structure -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,7 +73,8 @@ Contact us
         <h1>Contact Us</h1>
         <p>If you have any questions, please don't hesitate to reach out. Fill out the form below, and we'll get back to you as soon as possible. 
             For more general information about the Glazer Children’s Museum, please call (813)443-3861 or email info@glazermuseum.org.</p>
-        <form id="contact-form" action="submit_contact_form.php" method="POST">
+        <form id="contact-form" action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -85,7 +86,7 @@ Contact us
             
             <button type="submit">Send Message</button>
         </form>
-    </main>
+    </main>    
 </body>
 </html>
 

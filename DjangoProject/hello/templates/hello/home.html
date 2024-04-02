@@ -46,7 +46,7 @@ Home
             margin-top: 250px;
         }
 
-        .Play, .Exhibits, .Calender, .Progress, .Account, .Help {
+        .Play, .Playselect, .Exhibits, .Calender, .Progress, .Account, .Help {
             background-color: rgb(59, 187, 209);
             position: absolute;
             width: 250px;
@@ -57,24 +57,25 @@ Home
             transform: translate(-50%,0);
         }
 
-        .Play { top: 5%; }
+        .Playselect { top: 5%; }
         .Exhibits { top: 20%; }
         .Calender { top: 35%; }
         .Progress { top: 50%; }
         .Account { top: 65%; }
-        .Help { top: 80%; }
+        .Help { top: 50%; }
     </style>
     <head>
         <div class="test"><h1 id="banner_text">Glazer Children's Museum</h1></div>
     </head>
     <body>
         <div class="selection">
-            <a href="{% url 'play' %}" class="Play"><h1 id="selection_text">Play</h1></a>
+            <!--<a href="{% url 'play' %}" class="Play"><h1 id="selection_text">Play</h1></a> -->
+            <a href="{% url 'playselect' %}" class="Playselect"><h1 id="selection_text">Play</h1></a>
             <a href="{% url 'exhibits' %}" class="Exhibits"><h1 id="selection_text">Exhibits</h1></a>
             <a href="{% url 'calendar' %}" class="Calender"><h1 id="selection_text">Calendar</h1></a>
-            <a href="{% url 'progress' %}" class="Progress"><h1 id="selection_text">Progress</h1></a>
-            <a href="{% url 'account' %}" class="Account"><h1 id="selection_text">Account</h1></a>
-            <a href="{% url 'help' %}" class="Help"><h1 id="selection_text">Help</h1></a>
+            <!-- <a href="{% url 'progress' %}" class="Progress"><h1 id="selection_text">Progress</h1></a>  Removed from webpage-->
+            <!-- <a href="{% url 'account' %}" class="Account"><h1 id="selection_text">Account</h1></a>     Removed from webpage-->
+            <a href="{% url 'help' %}" class="Help"><h1 id="selection_text">Help</h1></a> 
         </div>
     </body>
 </html>

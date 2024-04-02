@@ -1,56 +1,58 @@
 {% extends "hello/layout.html" %}
 {% load static %}
-
-{% block title %}
-Help
-{% endblock %}
-
+{% block title %}Help{% endblock %}
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'hello/static/help.css' %}">
-<div id="header">Help Center</div>
-<div align="center">
+<link rel="stylesheet" type="text/css" href="{% static 'hello/help.css' %}">
+<body style="background-image: url('{% static "images/bkgrd.jpg" %}');">
     <div id="stuff">
-        <p>How can we assist you today?</p>
+        <!-- Search Bar -->
         <div class="search">
             <input placeholder="Search..." type="text">
             <button type="submit">Go</button>
         </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">FAQ's</p>
-                    <p>Hover Me</p>
-                </div>
-                <div class="flip-card-back">
-                    <p class="title">BACK</p>
-                    <p>Leave Me</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card1">
-            <div class="flip-card-inner1">
-                <div class="flip-card-front1">
-                    <p class="title1">Account Management?</p>
-                    <p>Hover Me</p>
-                </div>
-                <div class="flip-card-back1">
-                    <p class="title1">BACK</p>
-                    <p>Leave Me</p>
+        
+        <!-- Cards Container -->
+        <div class="cards-container">
+            <!-- Flip Card 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">FAQ's</p>
+                        <p>Hover Me</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">BACK</p>
+                        <p>Leave Me</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="flip-card2">
-            <div class="flip-card-inner2">
-                <div class="flip-card-front2">
-                    <p class="title2">Navigation</p>
-                    <p>Hover Me</p>
+            <!-- Flip Card 2 -->
+            <div class="flip-card1">
+                <div class="flip-card-inner1">
+                    <div class="flip-card-front1">
+                        <p class="title1">Account Management?</p>
+                        <p>Hover Me</p>
+                    </div>
+                    <div class="flip-card-back1">
+                        <p class="title1">BACK</p>
+                        <p>Leave Me</p>
+                    </div>
                 </div>
-                <div class="flip-card-back2">
-                    <p class="title2">BACK</p>
-                    <p>Leave Me</p>
+            </div>
+            <!-- Flip Card 3 -->
+            <div class="flip-card2">
+                <div class="flip-card-inner2">
+                    <div class="flip-card-front2">
+                        <p class="title2">Navigation</p>
+                        <p>Hover Me</p>
+                    </div>
+                    <div class="flip-card-back2">
+                        <p class="title2">BACK</p>
+                        <p>Leave Me</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
 {% endblock %}
