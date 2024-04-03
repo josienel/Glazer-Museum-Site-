@@ -32,10 +32,10 @@
 }
 .title {
   font-family: "Scope One", serif;
-    font-size: 2rem;
-    font-weight: bolder;
+    font-size: 2.5rem;
+    font-weight: 300px;
     color: #24b0bd;
-    margin-bottom: 20px; /* Add space between text and links */
+    margin-bottom: 0.1px; 
 
 }
 
@@ -250,3 +250,4 @@
   .btn:active {
     opacity: 0.5;
   }
+  
