@@ -25,8 +25,24 @@
     align-items: center; /* Center vertically */
     padding: 10px; /* Add padding for space around content */
 }
+.description {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: larger;
+}
+.title {
+  font-family: "Scope One", serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #24b0bd;
+    margin-bottom: 20px; /* Add space between text and links */
 
+}
 
+.playTITLE{
+  color: #21a6b3;
+  font-weight: 300px;
+}
 
 .header-content {
     display: flex;
@@ -63,16 +79,14 @@
 
   
 
-body {
-    background-color: #ffffff;
+  body {
+    background-image: url(twinkleBCK.png); /* make sure to import background photo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-        
-
-
-        
+    background-position: center;
       }
+
 .Base2 {
   width: 600px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
   height: 354px;
@@ -168,14 +182,14 @@ body {
     flex-direction: column; /* Arrange buttons vertically */
     align-items: center;/* Center buttons horizontally */
   }
-  .playTITLE h1 {
-    font-size: 12px;
-    color: black;
-    font-weight: 200;
+  .toPLAY h1 {
+    
+    color:white;
+    font-weight: 1000px;
     align-items: center;
     flex-direction: column;
-    text-shadow: #ecebe9;
-  }
+    text-shadow: 15px 15px 30px #bab9b7,
+    -15px -15px 30px #ecebe9; }
   
   .Base3 .toPLAY {
     flex-grow: 1;
