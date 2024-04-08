@@ -3,6 +3,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 .scope-one-regular {
   font-family: "Scope One", serif;
   font-weight: 400;
@@ -12,27 +13,23 @@
 .card {
   width: 70rem;
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto; /* Combined margin-left and margin-right */
   border-radius: 1rem;
   position: relative;
-  background-color: rgb(238, 236, 236); /* Brown color for the prehistoric theme */
+  background-color: rgb(238, 236, 236);
   background-image: white;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   text-align: center;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 10px; /* Add padding for space around content */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
-
-
 
 .header-content {
   display: flex;
-  flex-direction: column; /* Arrange content vertically */
-  align-items: center; /* Center horizontally */
-  /* Come back and change for other screens */
+  flex-direction: column;
+  align-items: center;
 }
 
 .maintitle {
@@ -40,12 +37,12 @@
   font-size: 6rem;
   font-weight: bolder;
   color: #d97d14;
-  margin-bottom: 20px; /* Add space between text and links */
+  margin-bottom: 20px;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 12;
+  padding: 12px; /* Added 'px' unit */
   margin: 0;
 }
 
@@ -62,181 +59,165 @@ nav ul li a {
 }
 
 body {
-  background-image: url(vetBCKRND.png); /* make sure to import background photo */
+  background-image: url(vetBCKRND.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-    }
+}
 
 .description {
-      margin-left: 30px;
-      margin-right: 30px;
-      font-size: larger;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: larger;
 }
+
 .title {
-      font-family: "Scope One", serif;
-        font-size: 2.5rem;
-        font-weight: 300px;
-        color: #d97d14;
-        margin-bottom: 0.1px; 
+  font-family: "Scope One", serif;
+  font-size: 2.5rem;
+  font-weight: 300px; 
+  color: #d97d14;
+  margin-bottom: 0.1px;
 }
-    
-.playTITLE{
-      font-family: "Scope One", serif;
-      color: #d97d14;
-      font-weight: 300px;
-}
-    
-.header-content {
-        display: flex;
-        flex-direction: column; /* Arrange content vertically */
-        align-items: center; /* Center horizontally */
-        /* Come back and change for other screens */
-}
-      
-.maintitle {
-        font-family: "Scope One", serif;
-        font-size: 6rem;
-        font-weight: bolder;
-        color: #d97d14;
-        margin-bottom: 20px; /* Add space between text and links */
+
+.playTITLE {
+  font-family: "Scope One", serif;
+  color: #d97d14;
+  font-weight: 300px;
+  font-size: 2.5rem; 
 }
 
 .Base2 {
-width: 600px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
-height: 354px;
-border-radius: 30px;
-background: rgb(238, 236, 236);
-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-position: center;
-margin-left: calc(2% + 0.53rem);
-margin-top: calc(20% + 0.5rem);
+  width: 600px;
+  height: 354px;
+  border-radius: 30px;
+  background: rgb(238, 236, 236);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  position: center;
+  margin-left: calc(2% + 0.53rem);
+  margin-top: calc(20% + 0.5rem);
 }
-.Base2 h2{
-text-align: center;
+
+.Base2 h2 {
+  text-align: center;
 }
+
 .maininf {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5em;
   row-gap: 0.1em;
-  
 }
 
-
-
 .texthold1 {
-width: 400px;
-height: 254px;
-border-radius: 30px;
-background: #e0e0e0;
-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-position: relative; /* Use relative positioning */
-margin: 8% auto 0; /* Adjust margins for centering */
-text-align: center; /* Center the content horizontally */
-overflow: hidden; /* Hide overflowing content */
+  width: 400px;
+  height: 254px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  position: relative;
+  margin: 8% auto 0;
+  text-align: center;
+  overflow: hidden;
 }
 
 .texthold1 img {
-width: 100%; /* Ensure the image fills the container's width */
-height: 100%; /* Ensure the image fills the container's height */
-object-fit: cover; /* Maintain aspect ratio and cover the container */
-border-radius: 30px; /* Apply border-radius to match the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 .Base3 {
-width: 480px; /*Come back and change to calc function so work on more screens: include width and height and content-box */
-height: 200px;
-border-radius: 30px;
-background: rgb(238, 236, 236);
-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-position: center;
-margin-bottom: 12%;
-margin-left: 10%;
-flex-direction: column; /* Arrange content vertically */
-align-items: center;
-text-align: center;
+  width: 480px;
+  height: 200px;
+  border-radius: 30px;
+  background: rgb(238, 236, 236);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  position: center;
+  margin-bottom: 12%;
+  margin-left: 10%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
-.card {
-  width: 90%; /* Adjust width to a percentage */
-}
+  .card {
+    width: 90%;
+  }
 
-.Base2 {
-  width: 90%; /* Adjust width to a percentage */
-  margin-left: auto;
-  margin-right: auto;
-}
+  .Base2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.maininf {
-  grid-template-columns: 1fr; /* Change to a single column layout */
-  column-gap: 0; /* Remove the gap between columns */
-  row-gap: 2em; /* Add some space between rows */
-}
+  .maininf {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 2em;
+  }
 
-.texthold1 {
-  width: 90%; /* Adjust width to a percentage */
-  height: auto; /* Let the height adjust automatically */
-  margin-top: 5%; /* Adjust margin from top */
-}
+  .texthold1 {
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+  }
 
-.maintitle {
-  font-size: 4rem;
-}
+  .maintitle {
+    font-size: 4rem;
+  }
 
-.Base3 {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 5%;
-  padding-bottom: 3%;
-  display: contents; /* Add display property */
-  flex-direction: column; /* Arrange buttons vertically */
-  align-items: center;/* Center buttons horizontally */
-}
-.playTITLE h1 {
-  font-size: 12px;
- 
-  font-weight: 200;
-  align-items: center;
-  flex-direction: column;
-  text-shadow: #ecebe9;
-}
-.playTITLE{
-  color:#d97d14;
-  font-weight: 300px;
-  width: auto;
-  box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 1rem;
-  position: relative;
-  background-color: rgb(244, 241, 241); /* Brown color for the prehistoric theme */
-  background-image: white;
-  box-shadow: rgba(227, 223, 223, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  text-align: center;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 10px; /* Add padding for space around content */
-}
+  .Base3 {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+    display: contents;
+    flex-direction: column;
+    align-items: center;
+  }
+  .playTITLE h1 {
+    font-size: 12px;
+    font-weight: 200;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: #ecebe9;
+  }
+  .playTITLE {
+    color: #d97d14;
+    font-weight: 300;
+    width: auto;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    position: relative;
+    background-color: rgb(244, 241, 241);
+    background-image: white;
+    box-shadow: rgba(227, 223, 223, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
 
-.Base3 .toPLAY {
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  flex-direction: column;
-}
+  .Base3 .toPLAY {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+  }
 
-.Base3 .toPLAY .btn {
-  margin: 10px 0; /* Add margin between the buttons */
+  .Base3 .toPLAY .btn {
+    margin: 10px 0;
+  }
 }
-}
-
 
 /* Additional adjustments for even smaller screens */
 @media only screen and (max-width: 480px) {
@@ -245,23 +226,20 @@ text-align: center;
   }
 
   .Base2 {
-    margin-top: 10%; /* Further adjust margin from top */
+    margin-top: 10%;
   }
+
   .Base3 {
-    width: 90%; /* Adjust width to a percentage */
-    margin: 0 auto; /* Center horizontally */
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 5%;
-    padding-bottom: 3%; /* Adjust margin from bottom */
+    padding-bottom: 3%;
   }
-  
 }
 
 .btn {
   transition: all 0.3s ease-in-out;
   font-family: "Dosis", sans-serif;
-}
-
-.btn {
   width: 150px;
   height: 60px;
   border-radius: 50px;
