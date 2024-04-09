@@ -17,7 +17,7 @@
 
 /* set background */
 body {
-  background-image: url(childrenhospitalBCKRND.png);
+  background-image: url(bankBCKGRND.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -54,7 +54,7 @@ body {
   font-family: "Scope One", serif;
   font-size: 6rem;
   font-weight: bolder;
-  color: #cfb355;
+  color: #e7b40f;
   margin-bottom: 20px;
 }
 /* nav as group */
