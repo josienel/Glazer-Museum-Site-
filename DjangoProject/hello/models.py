@@ -3,13 +3,15 @@ from django.db import models
 # Create models here.
 #Activity model
 class Activity(models.Model):
-    activity_id = models.IntegerField(primary_key=True)
-    exhibit_id = models.IntegerField()
-    play_id = models.IntegerField()
-    act_name = models.CharField(max_length=100)
+    activity_ID = models.IntegerField(primary_key=True)
+    activity_name = models.CharField(max_length=100)
     act_desc = models.TextField()
-    activity_extend = models.TextField(blank=True, null=True)
-    whats_learned = models.TextField(blank=True, null=True)
+    activity_extend = models.TextField()
+    whats_learned = models.TextField()
+
+    def __str__(self):
+        return self.activity_name
+
 
 #Exhibit model
 class Exhibit:
