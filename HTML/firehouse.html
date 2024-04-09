@@ -19,7 +19,7 @@
 
                 <div class="Base1">
                     <div class="header-content">
-                        <h1 class="maintitle">Firehouse</h1>
+                        <h1 id="exhibit-name" class="maintitle"></h1>
                         <nav>
                             <ul>
                                 <li><a href="#home">Home</a></li>
@@ -36,7 +36,7 @@
                     <div class="Base2">
                         <div class="content">
                             <h2 class="title">Exhibit Info</h2>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis magna quis lectus fermentum, quis scelerisque orci pellentesque. Duis id porta justo. Sed ac enim id justo tincidunt hendrerit id ac lectus. Pellentesque maximus posuere tortor vitae consequat.</p>
+                            <p id="exhibit-description" class="description">
                         </div>
                     </div>
                         
@@ -60,8 +60,23 @@
             </main>
 
 <footer> <!--footer begins-->
-    <p>Copyright © 2024 Glazer's Children's Musuem</p>
+    <p>Copyright © 2024 Glazer Children's Museum</p>
 </footer> <!--footer ends-->
+        <script src="../Database/Code/fetchDataFromSheet.js"></script>
+        <script>
+            // Get data from specific rows/columns in Activities sheet and populate exhibit description
+            // fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'exhibit-description1', 2, [1]);
+
+            // Get exhibit description from specific row/column in Exhibits sheet
+            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'exhibit-description', 7, [2]);
+
+            // Get exhibit name from specific row/column in Exhibits sheet
+            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'exhibit-name', 7, [1]);
+
+
+            // Get data from specific place in Play sheet
+            // fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vTkqEmuHqTQsMav20F97U1_rL9yt-PW2T4LgUrSRzT4FSR54kJXbrsIqnqzM5qtJY0quUfv9-DQypWW/pubhtml', 'play-info', 2, [2]);
+        </script>
 </body>
 </div>
 </html>
