@@ -105,7 +105,7 @@
   }
   
   
-  /* area for the exhibt info to be positioned */
+  /* area for the activity info to be positioned */
   .Base3 {
     width: 600px;
     height: 354px;
@@ -116,7 +116,28 @@
     margin-left: calc(2% + 0.53rem);
     margin-top: calc(20% + 0.5rem);
   }
-  /* heading postioning, <--"Exhibit info" --> */
+  /* area for the activity extension info to be positioned */
+  .Base5 {
+    width: 600px;
+    height: 354px;
+    border-radius: 30px;
+    background: rgb(238, 236, 236);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    position: center;
+    margin-left: calc(2% + 0.53rem);
+    margin-top: calc(20% + 0.5rem);
+  }
+  .Base6 {
+    width: 600px;
+    height: 354px;
+    border-radius: 30px;
+    background: rgb(238, 236, 236);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    position: center;
+    margin-left: calc(2% + 0.53rem);
+    margin-top: calc(20% + 0.5rem);
+  }
+  /* heading postioning, <--"Activity Description" --> */
   .Base3 h2 {
     text-align: center;
   }
@@ -129,7 +150,7 @@
     color: #cfb355;
     margin-bottom: 0.1px;
   }
-  /* Words in the box Labeled Exhbit Info */
+  /* Words in the box Labeled Activity description */
   .description {
     font-family: "Scope One", serif;
     font-weight: 400;
