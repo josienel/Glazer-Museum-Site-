@@ -20,14 +20,17 @@ function fetchDataFromSheet(sheetUrl, listId, rowIndex, columnIndexes) {
                     const rowData = columnIndexes.map(index => {
                         const cell = cellValues[index];
                         // get text content from cell
-                        const cellContent = cell.match(/<td[^>]*>([\s\S]*?)<\/td>/)[1];
+                        let cellContent = cell.match(/<td[^>]*>([\s\S]*?)<\/td>/)[1];
                         // replace HTML entities with actual characters
-                        return cellContent.replace(/&apos;/g, "'");
+                        cellContent = cellContent.replace(/&apos;/g, "'");
+                        // replace <br> with newline characters
+                        cellContent = cellContent.replace(/<br\s*\/?>/gi, '\n');
+                        return cellContent;
                     });
 
                     // make a list item for the row data
                     const listItem = document.createElement('li');
-                    listItem.textContent = rowData.join(', '); // join data with commas if needed
+                    listItem.textContent = rowData.join('\n'); // join data with commas if needed
                     list.appendChild(listItem);
                 }
             } else {
