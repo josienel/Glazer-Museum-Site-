@@ -16,7 +16,7 @@
   margin: auto; /* Combined margin-left and margin-right */
   border-radius: 1rem;
   position: relative;
-  background-color: rgb(238, 236, 236);
+  background-color: #cfb355;
   background-image: white;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   text-align: center;
@@ -32,18 +32,13 @@
   align-items: center;
 }
 
-.maintitle {
-  font-family: "Scope One", serif;
-  font-size: 6rem;
-  font-weight: bolder;
-  color: #d97d14;
-  margin-bottom: 20px;
-}
+
 
 nav ul {
   list-style-type: none;
-  padding: 12px; /* Added 'px' unit */
+  padding: 2px; /* Added 'px' unit */
   margin: 0;
+  word-spacing: 22rem;
 }
 
 nav ul li {
@@ -52,8 +47,10 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #000000;
+  font-family: "Scope One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
   font-weight: bold;
   font-size: 25px;
 }
@@ -72,17 +69,25 @@ body {
   font-size: larger;
 }
 
+.maintitle {
+  font-family: "Scope One", serif;
+  font-size: 6rem;
+  font-weight: bolder;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
 .title {
   font-family: "Scope One", serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 300px; 
-  color: #d97d14;
+  color: #ffffff;
   margin-bottom: 0.1px;
 }
 
 .playTITLE {
   font-family: "Scope One", serif;
-  color: #d97d14;
+  color: #ffffff;
   font-weight: 300px;
   font-size: 2.5rem; 
 }
@@ -91,7 +96,7 @@ body {
   width: 600px;
   height: 354px;
   border-radius: 30px;
-  background: rgb(238, 236, 236);
+  background: #cfb355;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
   position: center;
   margin-left: calc(2% + 0.53rem);
@@ -113,7 +118,7 @@ body {
   width: 400px;
   height: 254px;
   border-radius: 30px;
-  background: #e0e0e0;
+  background: #cfb355;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   position: relative;
   margin: 8% auto 0;
@@ -132,7 +137,7 @@ body {
   width: 480px;
   height: 200px;
   border-radius: 30px;
-  background: rgb(238, 236, 236);
+  background: #cfb355;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
   position: center;
   margin-bottom: 12%;
@@ -141,6 +146,7 @@ body {
   align-items: center;
   text-align: center;
 }
+
 
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
@@ -179,24 +185,17 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .playTITLE h1 {
+  /*.playTITLE h2 {
     font-size: 12px;
     font-weight: 200;
     align-items: center;
     flex-direction: column;
     text-shadow: #ecebe9;
   }
+  take this portion out its doing nothing */
   .playTITLE {
-    color: #d97d14;
-    font-weight: 300;
-    width: auto;
-    box-sizing: content-box;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 1rem;
-    position: relative;
-    background-color: rgb(244, 241, 241);
-    background-image: white;
+    background-color: #cfb355;
     box-shadow: rgba(227, 223, 223, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     text-align: center;
     display: flex;
@@ -216,6 +215,9 @@ body {
 
   .Base3 .toPLAY .btn {
     margin: 10px 0;
+  }
+  nav ul {
+    word-spacing: 0rem;
   }
 }
 
@@ -243,13 +245,13 @@ body {
   width: 150px;
   height: 60px;
   border-radius: 50px;
-  background-image: linear-gradient(135deg, #d97d14 4%, #da7f00 100%);
+  background-image: linear-gradient(135deg, #fffefc 4%, #f7f3e8 100%);
   box-shadow: 0 20px 30px -6px #0e0e0e;
   outline: none;
   cursor: pointer;
   border: none;
-  font-size: 24px;
-  color: white;
+  font-size: 30px;
+  color: #cfb355;
 }
 
 .btn:hover {
