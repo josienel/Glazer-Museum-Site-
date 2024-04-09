@@ -17,7 +17,7 @@
 
 /* set background */
 body {
-  background-image: url(bankBCKGRND.png);
+  background-image: url(bankkBCKGRND.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -54,7 +54,7 @@ body {
   font-family: "Scope One", serif;
   font-size: 6rem;
   font-weight: bolder;
-  color: #e7b40f;
+  color: #ffc505;
   margin-bottom: 20px;
 }
 /* nav as group */
@@ -76,7 +76,7 @@ nav ul li a {
   font-family: "Scope One", serif;
   font-weight: 400;
   font-style: normal;
-  color: #559aa3;
+  color: #c49b18;
   font-weight: bolder;
   font-size: 32px;
 }
@@ -126,7 +126,7 @@ nav ul li a {
   font-family: "Scope One", serif;
   font-size: 2.5rem;
   font-weight: 300px; 
-  color: #cfb355;
+  color: #ffc505;
   margin-bottom: 0.1px;
 }
 /* Words in the box Labeled Exhbit Info */
@@ -147,7 +147,7 @@ nav ul li a {
   width: 480px;
   height: 200px;
   border-radius: 30px;
-  background: #fdf9f9;
+  background: #ffc505;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   position: center;
   margin-bottom: 11%;
@@ -160,7 +160,7 @@ nav ul li a {
 /*the play title "what play is happening?" */
 .playTITLE {
   font-family: "Scope One", serif;
-  color: #cfb355;
+  color: white;
   font-weight: 300px;
   font-size: 2.5rem; 
 }
@@ -228,7 +228,7 @@ nav ul li a {
   .playTITLE {
     border-radius: 1rem;
     position: relative;
-    background-color: #fdf9f9;
+    background-color: #ffc505;
     background-image: white;
     box-shadow: rgba(227, 223, 223, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     text-align: center;
@@ -288,7 +288,8 @@ nav ul li a {
   width: 150px;
   height: 60px;
   border-radius: 50px;
-  background-image: linear-gradient(135deg, #bea44d 4%, #cfb355 100%);
+  color: #c1c0bd;
+  background-image: linear-gradient(135deg, #c1c0bd 4%,  #a3a19b 100%);
   box-shadow: 0 20px 30px -6px #0e0e0e;
   outline: none;
   cursor: pointer;
