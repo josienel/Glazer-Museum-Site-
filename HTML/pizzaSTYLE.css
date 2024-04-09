@@ -17,7 +17,7 @@
 
 /* set background */
 body {
-  background-image: url(pizzaaBCKRND.png);
+  background-image: url(pizzaaBCKGRND.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -34,7 +34,7 @@ body {
   margin: auto; /* Combined margin-left and margin-right */
   border-radius: 1rem;
   position: relative;
-  background-color: rgb(238, 236, 236);
+  background-color: rgb(142, 17, 17);
   background-image: white;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   text-align: center;
@@ -76,7 +76,7 @@ nav ul li a {
   font-family: "Scope One", serif;
   font-weight: 400;
   font-style: normal;
-  color: #559aa3;
+  color: #cfb355;
   font-weight: bolder;
   font-size: 32px;
 }
@@ -89,7 +89,7 @@ nav ul li a {
   width: 450px;
   height: 274px;
   border-radius: 30px;
-  background: #e0e0e0;
+  background: rgb(142, 17, 17);
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   position: relative;
   margin: 4% auto 0;
@@ -110,7 +110,7 @@ nav ul li a {
   width: 600px;
   height: 354px;
   border-radius: 30px;
-  background: rgb(238, 236, 236);
+  background: rgb(142, 17, 17);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
   position: center;
   margin-left: calc(2% + 0.53rem);
@@ -137,7 +137,7 @@ nav ul li a {
   margin-left: 30px;
   margin-right: 30px;
   font-size: larger;
-  color: rgb(0, 0, 0);
+  color: #cfb355;
 }
 
 
@@ -147,7 +147,7 @@ nav ul li a {
   width: 480px;
   height: 200px;
   border-radius: 30px;
-  background: #fdf9f9;
+  background: rgb(142, 17, 17);
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   position: center;
   margin-bottom: 11%;
@@ -228,7 +228,7 @@ nav ul li a {
   .playTITLE {
     border-radius: 1rem;
     position: relative;
-    background-color: #fdf9f9;
+    background-color: rgb(142, 17, 17);
     background-image: white;
     box-shadow: rgba(227, 223, 223, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     text-align: center;
