@@ -21,8 +21,8 @@ function fetchDataFromSheet(sheetUrl, listId, rowIndex, columnIndexes) {
                         const cell = cellValues[index];
                         // get text content from cell
                         let cellContent = cell.match(/<td[^>]*>([\s\S]*?)<\/td>/)[1];
-                        // replace HTML entities with actual characters
-                        cellContent = cellContent.replace(/&apos;/g, "'");
+                        // decode HTML entities
+                        cellContent = decodeHTMLEntities(cellContent);
                         // replace <br> with newline characters
                         cellContent = cellContent.replace(/<br\s*\/?>/gi, '\n');
                         return cellContent;
@@ -30,7 +30,7 @@ function fetchDataFromSheet(sheetUrl, listId, rowIndex, columnIndexes) {
 
                     // make a list item for the row data
                     const listItem = document.createElement('li');
-                    listItem.textContent = rowData.join('\n'); // join data with commas if needed
+                    listItem.textContent = rowData.join('\n');
                     list.appendChild(listItem);
                 }
             } else {
@@ -38,4 +38,11 @@ function fetchDataFromSheet(sheetUrl, listId, rowIndex, columnIndexes) {
             }
         })
         .catch(error => console.error('Error fetching data:', error));
+}
+
+// Function to decode HTML entities - deals with apostrophes
+function decodeHTMLEntities(text) {
+    const element = document.createElement('div');
+    element.innerHTML = text;
+    return element.textContent;
 }
