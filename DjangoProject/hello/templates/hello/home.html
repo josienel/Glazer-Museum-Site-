@@ -6,77 +6,99 @@ Home
 {% block content %}
 <!DOCTYPE html>
 <html>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-image: url('{% static "images/homebackground.jpeg" %}');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'hello/home.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        .test{
-            top: 30px;
-            left: 0%;
-            position: absolute;
-            background-color: rgb(159, 0, 221);
-            text-align: center;
-            width: 100%;
-        }
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="https://glazermuseum.org/deai/">About</a>
+    <a href="{% url 'playselect' %}">Play</a>
+    <a href="{% url 'exhibits' %}">Exhibits</a>
+    <a href="https://glazermuseum.org/signatureevents/">Calendar</a>
+    <a href="{% url 'help' %}">Help</a>
+</div>
+</div>
 
-        #banner_text{
-            color: white;
-        }
+<div id="header">
+    Welcome!
+</div>
 
-        #selection_text{
-            color: white;
-            margin-top: 3%; 
-        }
 
-        .selection{
-            background-color: rgb(159, 0, 221);
-            position: absolute;
-            height: 500px;
-            width: 300px;
-            left: 50%;
-            top: 30%;
-            transform: translate(-50%, -50%);
-            border-radius: 50px;
-            margin-top: 250px;
-        }
 
-        .Play, .Playselect, .Exhibits, .Calender, .Progress, .Account, .Help {
-            background-color: rgb(59, 187, 209);
-            position: absolute;
-            width: 250px;
-            height: 10%;
-            left: 50%;
-            border-radius: 50px;
-            text-align: center;
-            transform: translate(-50%,0);
-        }
+<!-- ----------------------humburger menu stuff ------------------------->
+<span style="font-size:45px;cursor:pointer;position: absolute; top: 45px;left: 40px;" onclick="openNav()">&#9776;</span>
 
-        .Playselect { top: 5%; }
-        .Exhibits { top: 20%; }
-        .Calender { top: 35%; }
-        .Progress { top: 50%; }
-        .Account { top: 65%; }
-        .Help { top: 50%; }
-    </style>
-    <head>
-        <div class="test"><h1 id="banner_text">Glazer Children's Museum</h1></div>
-    </head>
-    <body>
-        <div class="selection">
-            <!--<a href="{% url 'play' %}" class="Play"><h1 id="selection_text">Play</h1></a> -->
-            <a href="{% url 'playselect' %}" class="Playselect"><h1 id="selection_text">Play</h1></a>
-            <a href="{% url 'exhibits' %}" class="Exhibits"><h1 id="selection_text">Exhibits</h1></a>
-            <a href="{% url 'calendar' %}" class="Calender"><h1 id="selection_text">Calendar</h1></a>
-            <!-- <a href="{% url 'progress' %}" class="Progress"><h1 id="selection_text">Progress</h1></a>  Removed from webpage-->
-            <!-- <a href="{% url 'account' %}" class="Account"><h1 id="selection_text">Account</h1></a>     Removed from webpage-->
-            <a href="{% url 'help' %}" class="Help"><h1 id="selection_text">Help</h1></a> 
+<script>
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+</script>
+
+<div class="containerimg" >
+
+  <br>
+
+    <div class="text">
+        This is Sample Text.
+      </div>
+
+
+      <div class="text1">
+        This is Sample Text.This is Sample Text.<br>
+        This is Sample Text.This is Sample Text.<br>
+        This is Sample Text.This is Sample Text.<br>
+        This is Sample Text.This is Sample Text.<br>
+        This is Sample Text.This is Sample Text.<br>
+        This is Sample Text.This is Sample Text.
+      </div>
+
+
+      <div class="button">
+        <div align = "center">
+          Click HERE.
         </div>
-    </body>
+
+      </div>
+
+    <div class="cards">
+      <div class="card red">
+        <p class="tip">Hover Me</p>
+      </div>
+      <div class="card blue">
+        <p class="tip">Hover Me</p>
+      </div>
+
+    </div>
+
+</div>
+
+
+<div class="stuff">
+  This will have more info and some pictures
+</div>
+
+   <br><br>
+  <div align = "center"  >
+<div class="loader">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+     </div>
+
+</body>
 </html>
 {% endblock %}
