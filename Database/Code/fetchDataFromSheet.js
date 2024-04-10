@@ -29,9 +29,10 @@ function fetchDataFromSheet(sheetUrl, listId, rowIndex, columnIndexes) {
                     });
 
                     // make a list item for the row data
-                    const listItem = document.createElement('li');
+                    const listItem = document.createElement('notlist');
                     listItem.textContent = rowData.join('\n');
                     list.appendChild(listItem);
+                    console.log(list)
                 }
             } else {
                 console.error('Row index out of bounds.');
