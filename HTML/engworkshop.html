@@ -48,10 +48,9 @@
                         <div class="Base4">
                             <div class="toPLAY">
                             <h2 class="playTITLE">Activities?</h2>
-                              <button class="btn" onclick="navigateToLink(event, 'link1.html')">Object</button> 
-                              <button class="btn" onclick="navigateToLink(event, 'link2.html')">Creative</button>
-                              <button class="btn" onclick="navigateToLink(event, 'link3.html')">Social</button>
-                            </div>
+                              <button id="activity1" class="btn" onclick="navigateToLink(event, 'link1.html')"></button>
+                              <button id="activity2" class="btn" onclick="navigateToLink(event, 'link2.html')">Creative</button>
+                              </div>
                             
 
                         </div>
@@ -65,7 +64,8 @@
         <script src="../Database/Code/fetchDataFromSheet.js"></script>
         <script>
             // Get data from specific rows/columns in Activities sheet and populate exhibit description
-            // fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'exhibit-description1', 2, [1]);
+            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity1', 28, [1]);
+            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity2', 29, [1]);
 
             // Get exhibit description from specific row/column in Exhibits sheet
             fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'exhibit-description', 5, [2]);
