@@ -1,0 +1,35 @@
+<!--HTML File for Database-->
+{% load static %} <!-- Load the static template tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glazer Children's Museum</title>
+</head>
+<body>
+<h1>Data from Activities</h1>
+<ul id="Activities"></ul>
+
+<h1>Data from Exhibits</h1>
+<ul id="Exhibits"></ul>
+
+<h1>Data from Play</h1>
+<ul id="Play"></ul>
+
+<!-- get the JS file with the function -->
+<script src="{% static 'hello/fetchDataFromSheet.js' %}"></script>
+
+<script>
+    // each sheet is separate -> in future make as sheets in one Google Sheet
+    // get data from specific rows/columns in Activities sheet
+    fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'Activities',2, [1,]);
+
+    // get data from specific row/column in Exhibits sheet
+    fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'Exhibits',2, [1, ]);
+
+    // get data from specific place in Play sheet
+    fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vTkqEmuHqTQsMav20F97U1_rL9yt-PW2T4LgUrSRzT4FSR54kJXbrsIqnqzM5qtJY0quUfv9-DQypWW/pubhtml', 'Play',2, [2, ]);
+</script>
+</body>
+</html>
