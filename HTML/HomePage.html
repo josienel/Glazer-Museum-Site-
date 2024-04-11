@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Preconnect links for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Importing Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="HomePage.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomePage</title>
+</head>
+
+<body>
+  <!-- Grid wrapper for layout -->
+  <div class="grid-wrapper">
+    <!-- Header section -->
+    <header>
+      <!-- Hamburger menu overlay -->
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="https://glazermuseum.org/mission/">About</a>
+          <a href="#">Activities</a>
+          <a href="#">Exhibits</a>
+          <a href="https://glazermuseum.org/signatureevents/">Calendar</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+
+      <!-- Hamburger menu toggle button -->
+      <span style="font-size:45px;cursor:pointer;position: relative; top: 50px;left: 7px;" onclick="openNav()">&#9776;
+      </span>
+
+      <!-- Welcome message -->
+      <div align="center">
+        Welcome!
+      </div>
+    </header>
+
+    <!-- Aside section -->
+    <aside>
+      <br>
+      <!-- Heading for Types of Play -->
+      <font size="+2.5">
+        <div class="titan"> Types of Play </div>
+      </font>
+      <p>
+        <!-- Description of Types of Play -->
+        <font size="+2">Incorporating various types of play into children's daily routine is essential. 
+          <br><br>Some of those different types include..
+        </font>
+      </p>
+      <!-- Buttons for each type of play -->
+      <span class="button1"> <div align="center"><a href="#">Physical</a></div> </span> <!-- link this to play1 -->
+      <span class="button2"> <div align="center"><a href="#">Soc-Emotional</a></div> </span> <!-- link this to play2 -->
+      <span class="button3"> <div align="center"><a href="#">Communication</a></div> </span><!-- link this to play3 -->
+      <span class="button4"> <div align="center"><a href="#">Cognitive</a></div> </span><!-- link this to play4 -->
+      <span class="button5"> <div align="center"><a href="#">Sensory</a></div> </span><!-- link this to play5 -->
+    </aside>
+
+    <!-- Article section -->
+    <article>
+      <br>
+      <!-- Heading for Exhibits and Activities -->
+      <font size="+3.9">
+        <div class="titan">Exhibits and Activities</div>
+      </font>
+      <p>
+        <!-- Description of Exhibits and Activities -->
+        <font size="+2"><l>During a GCM visit, children try on many identities to help explore the world around them. 
+          Whether they help a pet patient in the Vet Clinic or leap to stardom in our Twinkle Stars Theater, play is 
+          critical to our experience. We offer various different types of activities for each exhibit to encourage as 
+          much play as we possibly can. Let's take a look at some of our activities.</l>
+        </font>
+      </p>
+      <!-- Images for Exhibits and Activities -->
+      <div class="flex-wrapper">
+        <span class="image1"><div align="center"> </div></span>
+        <span class="image2"><div align="center"> </div></span>
+        <span class="image3"><div align="center"></div></span>
+      </div>
+    </article>
+
+    <!-- Footer section -->
+    <footer>
+      <div align="center">
+        <!-- Heading for Our Mission -->
+        <font size="+3">
+          <div class="titan">Our Mission</div>
+        </font>
+      </div>
+      <p>
+        <!-- Description of Our Mission -->
+        <font size="+2">
+          <div align="center"><l>We create and foster engaging, impactful PLAY experiences for children and families to 
+            learn and thrive. Our vision is a community that values PLAY as the foundation for the learning and development 
+            of children and families across generations.</l>
+          </div>
+        </font>
+      </p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
+
