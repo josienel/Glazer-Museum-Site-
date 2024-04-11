@@ -4,95 +4,645 @@
 Play
 {% endblock %}
 {% block content %}
-<!--No Background-->
+<!-- Html and Css for the activities page for Glazers childrens museum project-->
+<!-- Creates multiple sections that scroll side ways allowing users to see the various activities the museam suggests for their kids-->
+
+<!-------------------------------------------------------------------------------------------------------------->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'hello/playselect.css' %}">
-    <script src="{% static 'hello/playselect.js' %}"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Nabla&family=Protest+Revolution&family=Protest+Riot&display=swap" rel="stylesheet">
-    <title>Exhibits</title>
+  <meta charset="UTF-8">
+
+  <!-- Standardizes the width so that translation to phone is easier -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS styling for the HTML-->
+
+  <style>
+    body {
+      overflow-x: hidden;
+      overflow: overlay;
+    }
+
+    .scroll-container {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 30%;
+      left: 50%;
+      height: 35%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container2 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 80%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container3 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 130%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container4 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 180%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    .scroll-container5 {
+      position: absolute;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: transparent;
+      width: 80%;
+      top: 230%;
+      height: 35%;
+      left: 50%;
+      transform: translate(-50%,0);
+      text-align: center;
+    }
+
+    /* Css for some of the cards within each scrolling section. Had to break them up into individual elements in order to make the  background images to work properly*/
+
+    .scroll-item {
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    vertical-align:top;
+    }
+    .scroll-item-lego{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('Lego.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-Dancing{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('Kids_dancing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-strategy{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('ChessSet.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-empathy{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('empathy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-turnBased{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('turnBased.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-FingerPainting{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('fingerPainting.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-sorting{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('Sorting.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-TalkingAbtDay{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('TalkingToParent.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-BluePrint{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('BluePrint.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-rhymes{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('Rhyme.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+    .scroll-item-Metaphore{
+    width: 290px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    font-size: 24px;
+    height: 70%;
+    z-index: 5;
+    background-image: url('Metaphor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align:top;
+    background-blend-mode:overlay;
+    }
+
+/* Css for the activities heading card */
+
+    .card {
+    width: 90%;
+    height: 15%;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    position: absolute;
+    background-color: #39b149; /* Brown color for the prehistoric theme */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding:0 ; /* Add padding for space around content */
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+     /* The Css for each section title i.e sensory, physical, etc*/
+
+    .title1{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%,0);
+      color: white;
+      
+    }
+    .title2{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 75%;
+      white-space: nowrap;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    .title3{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 125%;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    .title4{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 175%;
+      transform: translate(-50%,0);
+      color: white;
+    }
+    .title5{
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 225%;
+      transform: translate(-50%,0);
+      color: white;
+    }
+
+/* Makes the scroll bar blend in a little more so its does not stand out as much*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Css for the background colors for each section*/
+
+#section1 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #6bcef4;
+    left: 0;
+    top: 20%
+    
+}
+#section2 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #2283c4;
+    left: 0;
+    top: 70%
+}
+#section3 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(0, 90, 138);
+    left: 0;
+    top: 120%
+}
+#section4 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #874a9d;
+    left: 0;
+    top: 170%
+}
+#section5 {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: #f078ae;
+    left: 0;
+    top: 220%
+}
+
+/* Home logo in top left of screen*/
+
+#home_image{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  color: black;
+}
+.play_heading{
+            top: 0;
+            left: 0%;
+            width: 7.5%;
+            height: 100%;
+            position: absolute;
+            background-color: transparent;
+            text-align: center;
+}
+#Logo_img{
+        position: absolute;
+        height: 40pt;
+        width: 40pt;
+        left: 5%;
+        top: 50%;
+        transform: translate( 0,-48%);
+}
+#card_titles{
+  font-size: 35pt;
+  text-wrap: wrap;
+  z-index: 5;
+}
+.bckgrnd{
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  position: absolute;
+  z-index: -2;
+}
+.bckgrnd img{
+  width: 100%;
+  height: 100%;
+}
+
+
+  </style>
+
+  <!-- HTML for page mostly consisting of divs -->
+
+  <div class="card">Activities
+    <div class="play_heading">
+      <a href="other.html"><img id="Logo_img" src="house_logo.png" alt="Museam_logo"></a>
+      <h1 id="banner_play"></h1>
+  </div>
+  </div>
 </head>
 <body>
-<div class="background">
-  <header>
-      <div class="mcard">
-        <div class="header-content">
-          <h1 class="maint">Play Types</h1>
-          <nav>
-            <ul>
-            </ul>
-          </nav>
-        </div>
-      </div>
-  </header>
-  <main>
-    <div class="group-container">
-        <!-- Wrap each card with an <a> tag linking to the desired URL -->
-        <a href="/adventure" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Adventure</h1></div>
-            </div>
-        </a>
-        <a href="/risky" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Risky</h1></div>
-            </div>
-        </a>
-        <a href="/solitary" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Solitary</h1></div>
-            </div>
-        </a>
-        <a href="/artistic" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Artistic</h1></div>
-            </div>
-        </a>
-        <a href="/object-driven" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Object Driven</h1></div>
-            </div>
-        </a>
-        <a href="/fantasy" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Fantasy</h1></div>
-            </div>
-        </a>
-        <a href="/communication" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Communication</h1></div>
-            </div>
-        </a>
-        <a href="/dramatic" class="card-link">
-            <div class="card">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="card-inner"><h1>Dramatic</h1></div>
-            </div>
-        </a>
-    </div>
-    <script src="script.js"></script>
-  </main> 
-</body>
+<div class="bckgrnd"> <img src="msue.jpg" alt="msue"></div>
+
+<!--Backgound color sections -->
+
+<div id="section1"></div>
+<div id="section2"></div>
+<div id="section3"></div>
+<div id="section4"></div>
+<div id="section5"></div>
+
+<!-- Physical Activity Section-->
+
+<div class="title1">Physical</div>
+<div class="scroll-container" id="scrollContainer">
+  <div class="scroll-item-Dancing"><h1 id="card_titles">Shall We Dance?</h1></div>
+  <div class="scroll-item-lego"><h1 id="card_titles">Egocentrism Lego Activity</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Make Me a Pizza!</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Time to Draw</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Who is Faster?</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">At the Races</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Stop That Ball! </h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Where will it go?</h1></div>
+  <div class="scroll-item"><h1 id="card_titles">Piloting a boat</h1></div>
+  
 </div>
+
+<!-- Social-Empotional Activity Section-->
+<div class="title2">Social-Emotional</div>
+<div class="scroll-container2" id="scrollContainer2">
+  <div class="scroll-item-strategy"><h1 id="card_titles">Strategy Games</h1></div>
+  <div class="scroll-item-empathy"><h1 id="card_titles">Emapthy<br><br></h1></div>
+  <div class="scroll-item-turnBased"><h1 id="card_titles">Turn Based Games</h1></div>
+  <div class="scroll-item-turnBased"><h1 id="card_titles">Order Up!</h1></div>
+  <div class="scroll-item-turnBased"><h1 id="card_titles">Kaleidoscope</h1></div>
+  <div class="scroll-item-turnBased"><h1 id="card_titles">Counting Quickly</h1></div>
+  <div class="scroll-item-turnBased"><h1 id="card_titles">Twinkle Start Theater</h1></div>
+</div>
+
+<!-- Sensory Activity Section-->
+
+<div class="title3">Sensory</div>
+<div class="scroll-container3" id="scrollContainer3">
+  <div class="scroll-item-FingerPainting"><h1 id="card_titles">Finger Painting</h1></div>
+  <div class="scroll-item-FingerPainting"><h1 id="card_titles">Eating The Rainbow</h1></div>
+  <div class="scroll-item-FingerPainting"><h1 id="card_titles">Ahoy, There!</h1></div>
+  
+</div>
+
+<!-- Cognitive Activity Section-->
+
+<div class="title4">Cognitive</div>
+<div class="scroll-container4" id="scrollContainer4">
+  <div class="scroll-item-sorting"><h1 id="card_titles">Sorting<br><br></h1></div>
+  <div class="scroll-item-TalkingAbtDay"><h1 id="card_titles">Talk about their Day</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Build using Instructions</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Bilingual Activity</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Nutrition</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Money</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Bones</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Going to the Doctor</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Advanced Pizza Making</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Planning a Party</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Fire Fight!</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">How the Mind Wanders</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">How High?</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">How Strong</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Hidden Treasure</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Sailing, Sailing</h1></div>
+  <div class="scroll-item-BluePrint"><h1 id="card_titles">Whats down There</h1></div>
+  
+</div>
+
+<!-- Communication Activity Section-->
+
+<div class="title5">Communication</div>
+<div class="scroll-container5" id="scrollContainer5">
+  <div class="scroll-item-rhymes"><h1 id="card_titles">Creating Rhymes</h1></div>
+  <div class="scroll-item-Metaphore"><h1 id="card_titles">Think of metaphores</h1></div>
+  <div class="scroll-item-Metaphore"><h1 id="card_titles">Surely You're Joking</h1></div>
+  <div class="scroll-item-Metaphore"><h1 id="card_titles">The Case of the Missing Letter</h1></div>
+</div>
+
+
+<!-- Javascript allowing the user to click and drag the scroll wheel insted of having to use the sliding bar-->
+<script>
+  var container = document.getElementById('scrollContainer');
+
+  container.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container.scrollLeft += event.deltaY;
+    }
+  });
+  var container2 = document.getElementById('scrollContainer2');
+
+  container2.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container2.scrollLeft += event.deltaY;
+    }
+  });
+  var container3 = document.getElementById('scrollContainer3');
+
+  container3.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container3.scrollLeft += event.deltaY;
+    }
+  });
+  var container4 = document.getElementById('scrollContainer4');
+
+  container4.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container4.scrollLeft += event.deltaY;
+    }
+  });
+  var container5 = document.getElementById('scrollContainer5');
+
+  container5.addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container5.scrollLeft += event.deltaY;
+    }
+  });
+  
+</script>
+
+</body>
 </html>
 {% endblock %}
