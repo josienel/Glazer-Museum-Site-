@@ -82,7 +82,7 @@ def account(request):
 def help(request):
     return render(request, 'hello/help.html')
 
-#Play select
+#Activities
 def playselect(request):
     return render(request, 'hello/playselect.html')
 
