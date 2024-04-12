@@ -1,0 +1,100 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}
+Bones
+{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static bones.css %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=Madimi+One&family=Nabla&family=Protest+Revolution&family=Protest+Riot&family=Scope+One&family=Truculenta:opsz@12..72&display=swap" rel="stylesheet">
+
+    <!-- name of activity appearing on table -->
+    <title>Bones</title>
+
+
+</head>
+<div class="background">
+
+    <body>
+    <header>
+
+        <div class="Base1">
+            <div class="header-content">
+                <h1 id="activity-name" class="maintitle"></h1>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="maininf">
+            <div class="Base2">
+                <img src="ART-SMART.jpg" alt="Children's Hospital">
+            </div>
+
+
+            <div class="Base3">
+                <div class="content">
+                    <h2 class="title">Activity Description</h2>
+                    <p id="activity-desc" class="description"> </p>
+                </div>
+            </div>
+
+            <div class="Base5">
+                <div class="content">
+                    <h2 class="title">Activity Extension</h2>
+                    <p id="activity-extension" class="description"> </p>
+                </div>
+            </div>
+
+            <div class="Base6">
+                <div class="content">
+                    <h2 class="title">What was learned?</h2>
+                    <p id="activity-learned" class="description"> </p>
+                </div>
+            </div>
+
+            <!-- <div class="Base4">
+                 <div class="toPLAY">
+                 <h2 class="playTITLE">What play is happening?</h2>
+                   <button class="btn" onclick="navigateToLink(event, 'link1.html')">Object</button>
+                   <button class="btn" onclick="navigateToLink(event, 'link2.html')">Creative</button>
+                   <button class="btn" onclick="navigateToLink(event, 'link3.html')">Social</button>
+                 </div>
+
+
+             </div> -->
+        </div>
+
+    </main>
+
+    <footer> <!--footer begins-->
+        <p>Copyright © 2024 Glazer Children's Museum</p>
+    </footer> <!--footer ends-->
+
+    <script src="{% static 'hello/fetchDataFromSheet.js' %}"></script>
+    <script>
+        // Get data from specific rows/columns in Activities sheet and populate activity description
+        fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity-desc', 7, [2]);
+        // get the activity name from activities table
+        fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity-name', 7, [1]);
+        // get the activity extension from activities table
+        fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity-extension', 7, [3]);
+        // get what is learned from activities table
+        fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity-learned', 7, [4]);
+
+        // Get data from specific row/column in Exhibits sheet
+        //fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'exhibit-description', 12, [2]);
+
+        // Get data from specific place in Play sheet
+        // fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vTkqEmuHqTQsMav20F97U1_rL9yt-PW2T4LgUrSRzT4FSR54kJXbrsIqnqzM5qtJY0quUfv9-DQypWW/pubhtml', 'play-info', 2, [2]);
+    </script>
+    </body>
+</div>
+</html>
+{% endblock %}

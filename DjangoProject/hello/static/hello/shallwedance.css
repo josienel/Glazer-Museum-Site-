@@ -1,0 +1,330 @@
+/*fonts */
+.protest-riot-regular {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .scope-one-regular {
+    font-family: "Scope One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  
+  
+  
+  /* set background */
+  body {
+    background-image: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  
+  
+  /* the whole box of Main title */
+  .Base1 {
+    width: 70rem;
+    box-sizing: content-box;
+    margin: auto; /* Combined margin-left and margin-right */
+    border-radius: 1rem;
+    position: relative;
+    background-color: rgb(238, 236, 236);
+    background-image: white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  /* inside top box */
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Big title in main box */
+  .maintitle {
+    font-family: "Scope One", serif;
+    font-size: 6rem;
+    font-weight: bolder;
+    color: #cfb355;
+    margin-bottom: 20px;
+  }
+  /* nav as group */
+  nav ul {
+    list-style-type: none;
+    padding: 12px; /* Added 'px' unit */
+    margin: 0;
+    word-spacing: 11rem;
+  }
+  
+  /* nav as large outer scope individuals */
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* nav is smaller scope indivduals, influence to words and links */
+  nav ul li a {
+    font-family: "Scope One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #559aa3;
+    font-weight: bolder;
+    font-size: 32px;
+  }
+  
+  
+  
+  
+  /* the area that the picture of exhibit will sit in */
+  .Base2 {
+    width: 450px;
+    height: 274px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    position: relative;
+    margin: 4% auto 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  /* details of placement of image in base 2 */
+  .Base2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  
+  
+  /* area for the activity info to be positioned */
+  .Base3 {
+    width: 600px;
+    height: 354px;
+    border-radius: 30px;
+    background: rgb(238, 236, 236);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    position: center;
+    margin-left: calc(2% + 0.53rem);
+    margin-top: calc(20% + 0.5rem);
+  }
+  /* area for the activity extension info to be positioned */
+  .Base5 {
+    width: 600px;
+    height: 354px;
+    border-radius: 30px;
+    background: rgb(238, 236, 236);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    position: center;
+    margin-left: calc(2% + 0.53rem);
+    margin-top: calc(20% + 0.5rem);
+  }
+  .Base6 {
+    width: 600px;
+    height: 354px;
+    border-radius: 30px;
+    background: rgb(238, 236, 236);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    position: center;
+    margin-left: calc(2% + 0.53rem);
+    margin-top: calc(20% + 0.5rem);
+  }
+  /* heading postioning, <--"Activity Description" --> */
+  .Base3 h2 {
+    text-align: center;
+  }
+  
+  /* title of box that has info and text refraining to exhibit*/
+  .title {
+    font-family: "Scope One", serif;
+    font-size: 2.5rem;
+    font-weight: 300px;
+    color: #cfb355;
+    margin-bottom: 0.1px;
+  }
+  /* Words in the box Labeled Activity description */
+  .description {
+    font-family: "Scope One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  
+  /*area that will hold the buttons and title "What play is happening" */
+  .Base4 {
+    width: 480px;
+    height: 200px;
+    border-radius: 30px;
+    background: #fdf9f9;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    position: center;
+    margin-bottom: 11%;
+    margin-left: 10%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /*the play title "what play is happening?" */
+  .playTITLE {
+    font-family: "Scope One", serif;
+    color: #cfb355;
+    font-weight: 300px;
+    font-size: 2.5rem;
+  }
+  
+  
+  /* rule set for all of the bases in the body, base2,3,4 */
+  .maininf {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4.6em;
+    row-gap: 0em;
+  }
+  
+  
+  
+  /*    SCREEN ADJUSTMENTS  */
+  
+  /* Adjustments for smaller screens */
+  @media only screen and (max-width: 768px) {
+    /* the whole box of Main title */
+    .Base1 {
+      width: 90%;
+    }
+  
+    /* area for the exhibt info to be positioned */
+    .Base3 {
+      font-size: auto;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+    }
+  
+    /* rule set for all of the bases in the body, base2,3,4 */
+    .maininf {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 2em;
+    }
+  
+    /* the area that the picture of exhibit will sit in */
+    .Base2 {
+      width: 90%;
+      height: auto;
+      margin-top: 5%;
+    }
+  
+    /* Big title in main box */
+    .maintitle {
+      font-size: 4rem;
+    }
+  
+    /*area that will hold the buttons and title "Activity description" */
+    .Base4 {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 5%;
+      padding-bottom: 3%;
+      display: contents;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /*the play title "Activity description?" */
+    .playTITLE {
+      border-radius: 1rem;
+      position: relative;
+      background-color: #fdf9f9;
+      background-image: white;
+      box-shadow: rgba(227, 223, 223, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    /* Larger outer scale + inner scale work together, grouped like this because some
+    details can be more large scale and need different adjustments to work together */
+    .Base4 .toPLAY {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      flex-direction: column;
+    }
+  
+    /* even smaller telling all 3 grouping what their spacing is */
+    .Base4 .toPLAY .btn {
+      margin: 10px 0;
+    }
+  
+    /* nav as group */
+    nav ul {
+      word-spacing: 0rem;
+    }
+  }
+  
+  /* Additional adjustments for even smaller screens */
+  @media only screen and (max-width: 480px) {
+    /* the whole box of Main title */
+    .Base1 {
+      padding: 5px; /* Adjust padding */
+    }
+  
+    /* area for the exhibt info to be positioned */
+    .Base3 {
+      margin-top: 10%;
+    }
+  
+    /*area that will hold the buttons and title "What play is happening" */
+    .Base4 {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 5%;
+      padding-bottom: 3%;
+    }
+  }
+  
+  /* details of the whole button regarding color, shaping, and text */
+  .btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #bea44d 4%, #cfb355 100%);
+    box-shadow: 0 20px 30px -6px #0e0e0e;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  /* effect when button being hovered on */
+  .btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  /* effect when button being clicked */
+  .btn:active {
+    opacity: 0.5;
+  }

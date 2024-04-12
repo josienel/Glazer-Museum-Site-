@@ -85,23 +85,66 @@ def help(request):
 #Play select
 def playselect(request):
     return render(request, 'hello/playselect.html')
-#8 Cards on playselect page
-def adventure(request):
-    return render(request, 'hello/adventure.html')
-def risky(request):
-    return render(request, 'hello/risky.html')
-def solitary(request):
-    return render(request, 'hello/solitary.html')
-def artistic(request):
-    return render(request, 'hello/artistic.html')
-def objectdriven(request):
-    return render(request, 'hello/objectdriven.html')
-def fantasy(request):
-    return render(request, 'hello/fantasy.html')
-def communication(request):
-    return render(request, 'hello/communication.html')
-def dramatic(request):
-    return render(request, 'hello/dramatic.html')
+
+#Activities
+def shall_we_dance(request):
+    return render(request, 'hello/shallwedance.html')
+def egocentrism_lego_activity(request):
+    return render(request, 'hello/EgocentrismLegoActivity.html')
+def time_to_draw(request):
+    return render(request, 'hello/timetodraw.html')
+def who_is_faster(request):
+    return render(request, 'hello/whoisfaster.html')
+def at_the_races(request):
+    return render(request, 'hello/attheraces.html')
+def stop_that_ball(request):
+    return render(request, "hello/stopthatball.html")
+def where_will_it_go(request):
+    return render(request, 'hello/wherewillitgo.html')
+def piloting_a_boat(request):
+    return render(request, 'hello/pilotingaboat.html')
+def order_up(request):
+    return render(request, 'hello/orderup.html')
+def kaleidoscope(request):
+    return render(request, 'hello/kaleidoscope.html')
+def twinkle_star_theatre(request):
+    return render(request, 'hello/twinklestartheatre.html')
+def eating_the_rainbow(request):
+    return render(request, 'hello/eatingtherainbow.html')
+def ahoy_there(request):
+    return render(request, 'hello/Ahoythere.html')
+def sorting(request):
+    return render(request, 'hello/sorting.html')
+def bilingual_activity(request):
+    return render(request, 'hello/BilingualActivity.html')
+def nutrition(request):
+    return render (request, 'hello/nutrition.html')
+def money(request):
+    return render(request, 'hello/money.html')
+def bones(request):
+    return render(request, 'hello/bones.html')
+def advanced_pizza_making(request):
+    return render(request, 'hello/advancedpizzamking.html')
+def planning_a_party(request):
+    return render(request, 'hello/planningaparty.html')
+def firefighter(request):
+    return render(request, 'hello/firefighter.html')
+def how_the_mind_wanders(request):
+    return render(request, 'hello/howthemindwanders.html')
+def how_high(request):
+    return render(request, 'hello/howhigh.html')
+def how_strong(request):
+    return render(request, 'hello/howstrong.html')
+def hidden_treasure(request):
+    return render(request, 'hello/hiddentreasure.html')
+def sailing(request):
+    return render(request, 'hello/sailing.html')
+def whats_down_there(request):
+    return render(request, 'hello/whatsdownthere.html')
+def surely_youre_joking(request):
+    return render(request, 'hello/surelyyourejoking.html')
+def letters(request):
+    return render(request, 'hello/letters.html')
 
 
 #External Links

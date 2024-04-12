@@ -14,28 +14,34 @@ function fetchDataFromSheet(sheetUrl, listId, rowIndex, columnIndexes) {
                 // get table data cells from the row
                 const cellValues = row.match(/<td[\s\S]*?<\/td>/g);
 
-                // check that cellValues is not null or empty
+                // check that cellValues is not null or empty to avoid errors
                 if (cellValues && cellValues.length > 0) {
                     // get text content from specified columns
                     const rowData = columnIndexes.map(index => {
                         const cell = cellValues[index];
                         // get text content from cell
                         let cellContent = cell.match(/<td[^>]*>([\s\S]*?)<\/td>/)[1];
-                        // replace HTML entities with actual characters
-                        cellContent = cellContent.replace(/&apos;/g, "'");
                         // replace <br> with newline characters
                         cellContent = cellContent.replace(/<br\s*\/?>/gi, '\n');
                         return cellContent;
                     });
 
                     // make a list item for the row data
-                    const listItem = document.createElement('li');
-                    listItem.textContent = rowData.join('\n'); // join data with commas if needed
+                    const listItem = document.createElement('notlist');
+                    listItem.textContent = rowData.join('\n');
                     list.appendChild(listItem);
+                    console.log(list)
                 }
             } else {
                 console.error('Row index out of bounds.');
             }
         })
         .catch(error => console.error('Error fetching data:', error));
+}
+
+// decode HTML entities - deals with apostrophes + special characters
+function decodeHTMLEntities(text) {
+    const element = document.createElement('div');
+    element.innerHTML = text;
+    return element.textContent;
 }
