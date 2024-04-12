@@ -1,0 +1,338 @@
+/* Styling for the body */
+body {
+    background-color: #b2d4d8;
+}
+/* Flex container for centering */
+.container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+/* Header styling */
+#header {
+    text-align: center;
+    font-size: 400%;
+    height: 150px;
+    background-color: #b37de6;
+    border-radius: 90px;
+    color: rgb(255, 255, 255);
+    font-family: "Titan One", sans-serif;
+    margin: 10px 0;
+}
+/* Main content styling */
+#stuff {
+    border-color: #4794c7;    
+    border-style:dotted;
+    border-width: 5px;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    font-size: 160%;
+    color: rgb(102, 117, 133);
+    background-color: rgba(255, 255, 255, 0.666);    
+    border-radius: 30px;
+    font-family: "Oswald", sans-serif;
+    margin: 50px;
+    display: inline-block;
+    padding-top: 10px;
+}
+/* Search bar styling */
+.search {
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.search input[type="text"] {
+    width: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(72, 71, 71, 0.301);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search button[type="submit"] {
+    background-color: #789cc2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(56, 56, 56, 0.1);
+    transition: .9s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: rgb(75, 84, 108);
+}
+/* Flip card styling */
+.flip-card {
+    background-color: transparent;
+    width: 270px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    padding: 30px 30px 30px 15px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(133, 80, 255);
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, rgb(145, 108, 233) 30%, #b37de6 88%, rgb(201, 210, 241) 40%, rgb(201, 190, 230) 78%);
+    color: rgb(255, 255, 255);
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #4794c7 30%,  #92caf8 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card1 {
+    background-color: transparent;
+    width: 270px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    padding: 30px 30px 30px 15px;
+    
+}
+
+.title1 {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card1:hover .flip-card-inner1 {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front1,
+.flip-card-back1 {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(133, 80, 255);
+    border-radius: 1rem;
+}
+
+.flip-card-front1 {
+    background: linear-gradient(120deg, rgb(145, 108, 233) 30%, #b37de6 88%, rgb(201, 210, 241) 40%, rgb(201, 190, 230) 78%);
+    color: rgb(255, 255, 255);
+}
+
+.flip-card-back1 {
+    background: linear-gradient(120deg, #4794c7 30%,  #92caf8 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+.flip-card2 {
+    background-color: transparent;
+    width: 270px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    padding: 30px 30px 30px 15px;
+}
+
+.title2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card2:hover .flip-card-inner2 {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front2,
+.flip-card-back2 {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(133, 80, 255);
+    border-radius: 1rem;
+}
+
+.flip-card-front2 {
+    background: linear-gradient(120deg, rgb(145, 108, 233) 30%, #b37de6 88%, rgb(201, 210, 241) 40%, rgb(201, 190, 230) 78%);
+    color: rgb(255, 255, 255);
+}
+
+.flip-card-back2 {
+    background: linear-gradient(120deg, #4794c7 30%,  #92caf8 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1500px) {
+    .container {
+        flex-wrap: nowrap;/* Prevent wrapping on smaller screens */
+    }
+
+}
+
+
+
+@media (max-width: 1350px) {
+    #stuff {
+        width: 1000px;/* Adjust width for smaller screens */
+    }
+    
+}
+
+@media (max-width: 1100px) {
+    #stuff {
+        width: 800px;
+    }
+}
+
+@media (max-width: 900px) {
+    #stuff {
+        width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    #stuff {
+        width: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    #stuff {
+        width: 300px;
+    }
+}
+
+
+
+/* Overlay menu styling */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: "Titan One", sans-serif;
+    font-size: 40px;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    font-size: 90px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
