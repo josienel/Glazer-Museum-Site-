@@ -99,10 +99,11 @@ nav ul li a {
 
 
 /*    SCREEN ADJUSTMENTS  */
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .grid-container {
       grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
   }
+  
 }
 
 /* Adjustments for smaller screens */
@@ -122,11 +123,26 @@ nav ul li a {
     word-spacing: 0rem;
   }
 
+  .grid-item h1 {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+
+  /* Adjust button padding */
+  .grid-item {
+    padding: 15px; /* Adjust as needed */
+    size: content-box;
+  }
+
+  /* Grid layout adjustments */
   .grid-container {
     grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
-    font-size: medium;
+    gap: 5px; /* Reduce gap between grid items */
   }
 }
+
+
+
+
 
 /* Additional adjustments for even smaller screens */
 @media only screen and (max-width: 480px) {
@@ -134,16 +150,22 @@ nav ul li a {
   .Base1 {
     padding: 5px; /* Adjust padding */
   }
-  .grid-container {
-    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns */
-    font-size: medium;
-    
+  .grid-item h1 {
+    font-size: 1rem; /* Adjust as needed */
   }
-  .grid-item img {
-    width: 400px;
+
+  /* Further adjust button padding */
+  .grid-item {
+    padding: 10px; /* Adjust as needed */
+    width: 100px;
     height: 100px;
-    border-radius: 50%;
-    
+  }
+
+  /* Grid layout adjustments */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 column */
+    gap: 2px; /* Reduce gap between grid items */
   }
 }
 
@@ -202,3 +224,5 @@ nav ul li a {
   padding: 5px; /* Optional: add padding for spacing */
   border-radius: 10px;
 }
+
+
