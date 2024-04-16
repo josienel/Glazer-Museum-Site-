@@ -1,0 +1,4 @@
+HTML Bug Tracking- date--issue--solution--name
+
+4/16/2024 10:30 -- main page wont connect properly to django -- altered meta, it could've been causing confusion with @media and stlye sheet-- if doesn't work 
+                                try changing styling so all on same sheet instead of font size in html-- Connor Loudermilk

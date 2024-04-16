@@ -82,32 +82,14 @@ nav ul li a {
 
 
 /* the area that the picture of exhibit will sit in */
-.Base2 {
-  position: relative;
-  margin: 10% auto 0;
-  
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  margin-top: 20px; /* Adjust as needed */
-  column-gap: 4.3rem;
-  row-gap: 10%;
-  margin-bottom: 1px;
-  overflow: auto;
-}
+
 
 
 
 
 
 /* title of box that has info and text refraining to exhibit*/
-.title {
-  font-family: "Scope One", serif;
-  font-size: 2.5rem;
-  font-weight: 300px; 
-  color: #cfb355;
-  margin-bottom: 0.1px;
-}
+
 
 
 
@@ -127,20 +109,10 @@ nav ul li a {
 
   
   /* rule set for all of the bases in the body, base2,3,4 */
-  .maininf {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: 2em;
-  }
+  
 
   /* the area that the picture of exhibit will sit in */
-  .Base2 {
-    width: 90%;
-    height: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    grid-template-columns: repeat(1, 1fr);
-  }
+  
   
   /* Big title in main box */
   .maintitle {
@@ -167,65 +139,61 @@ nav ul li a {
 
 /* details of the whole button regarding color, shaping, and text */
 
-.testbutton1{
-    position: absolute;
-}
 
-.btn {
-  background-position: fill;
-}
+
+
 
 /* effect when button being hovered on */
-.btn:hover {
+.grid-item:hover {
   transform: translateY(3px);
   box-shadow: none;
 }
 
 /* effect when button being clicked */
-.btn:active {
+.grid-item:active {
   opacity: 0.5;
 }
 
-/*.btn-wrapper1 .btn-wrapper2 .btn-wrapper3 .btn-wrapper4 .btn-wrapper5 .btn-wrapper6 .btn-wrapper7 .btn-wrapper8 .btn-wrapper9 .btn-wrapper10 .btn-wrapper11 .btn-wrapper12 .btn-wrapper13 .btn-wrapper14 .btn-wrapper15 .btn-wrapper16 .btn-wrapper17 {
- box-sizing: content-box;
-} */
-.container {
+
+
+.grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  margin-top: 25px;
 }
 
-.photo-text-wrapper {
-  padding-top: 30px;
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f4fbf5;
+  border-color: #f4fbf5;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-image: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  padding: 10px;
   position: relative;
-  width: calc(90% - 10px); /* Adjust as needed */
-  margin-bottom: 20px; /* Adjust as needed */
 }
 
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust as needed */
-  padding: 20px; /* Adjust as needed */
-  color: white;
-}
-
-.text-overlay h1 {
-  font-size: 10px; /* Adjust as needed */
-  margin: 0 0 10px;
-}
-
-.text-overlay p {
-  font-size: 16px; /* Adjust as needed */
-  margin: 0;
-}
-
-img {
+.grid-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  border-radius: 50%;
+  
 }
 
-
+.grid-item h1 {
+  font-size: 25px;
+  position: absolute;
+  top: 50%; /* Adjust to center text vertically */
+  left: 50%; /* Adjust to center text horizontally */
+  transform: translate(-50%, -50%); /* Centering the text overlay */
+  /* Add any additional styling for the text overlay here */
+  color: white; /* Optional: set text color for better visibility */
+  padding: 5px; /* Optional: add padding for spacing */
+  border-radius: 10px;
+}
