@@ -99,6 +99,11 @@ nav ul li a {
 
 
 /*    SCREEN ADJUSTMENTS  */
+@media (max-width: 1200px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+  }
+}
 
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
@@ -107,23 +112,19 @@ nav ul li a {
     width: 90%;
   }
 
-  
-  /* rule set for all of the bases in the body, base2,3,4 */
-  
-
-  /* the area that the picture of exhibit will sit in */
-  
-  
   /* Big title in main box */
   .maintitle {
     font-size: 4rem;
   }
 
-   
-
   /* nav as group */
   nav ul {
     word-spacing: 0rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    font-size: medium;
   }
 }
 
@@ -133,14 +134,18 @@ nav ul li a {
   .Base1 {
     padding: 5px; /* Adjust padding */
   }
-
- 
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns */
+    font-size: medium;
+    
+  }
+  .grid-item img {
+    width: 400px;
+    height: 100px;
+    border-radius: 50%;
+    
+  }
 }
-
-/* details of the whole button regarding color, shaping, and text */
-
-
-
 
 
 /* effect when button being hovered on */
@@ -187,7 +192,7 @@ nav ul li a {
 }
 
 .grid-item h1 {
-  font-size: 25px;
+  font-size: fit-content;
   position: absolute;
   top: 50%; /* Adjust to center text vertically */
   left: 50%; /* Adjust to center text horizontally */
