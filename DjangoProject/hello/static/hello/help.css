@@ -1,38 +1,42 @@
+/* Styling for the body */
 body {
-  background-color: rgb(209, 228, 234);
+  background-color: #b2d4d8;
 }
-
+/* Flex container for centering */
 .container {
   display: flex;
   justify-content: center;
   overflow-x: auto;
 }
-
+/* Header styling */
 #header {
   text-align: center;
-  font-size: 300%;
+  font-size: 400%;
+  height: 150px;
+  background-color: #b37de6;
+  border-radius: 90px;
   color: rgb(255, 255, 255);
-  font-family: Pacifico, Static;
-  margin: 30px 0;
+  font-family: "Titan One", sans-serif;
+  margin: 10px 0;
 }
-
+/* Main content styling */
 #stuff {
-  border: rgba(170, 194, 218, 0.856);    
-  border-style:groove;
-  border-width: 10px;
+  border-color: #4794c7;    
+  border-style:dotted;
+  border-width: 5px;
   text-align: center;
   height: 100%;
   width: 80%;
-  font-size: 150%;
+  font-size: 160%;
   color: rgb(102, 117, 133);
   background-color: rgba(255, 255, 255, 0.666);    
   border-radius: 30px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 50px;
   display: inline-block;
   padding-top: 10px;
 }
-
+/* Search bar styling */
 .search {
   padding-bottom: 20px;
   padding-top: 30px;
@@ -64,13 +68,13 @@ body {
   color: rgb(255, 255, 255);
   background-color: rgb(75, 84, 108);
 }
-
+/* Flip card styling */
 .flip-card {
   background-color: transparent;
   width: 270px;
   height: 254px;
   perspective: 1000px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Oswald", sans-serif;
   cursor: pointer;
   display: inline-block;
   padding: 30px 30px 30px 15px;
@@ -112,12 +116,12 @@ body {
 }
 
 .flip-card-front {
-  background: linear-gradient(120deg, rgb(154, 171, 231) 30%, rgb(107, 118, 175) 88%, rgb(201, 210, 241) 40%, rgb(166, 185, 220) 78%);
+  background: linear-gradient(120deg, rgb(145, 108, 233) 30%, #b37de6 88%, rgb(201, 210, 241) 40%, rgb(201, 190, 230) 78%);
   color: rgb(255, 255, 255);
 }
 
 .flip-card-back {
-  background: linear-gradient(120deg, rgb(171, 197, 203) 30%, rgb(82, 128, 151) 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
+  background: linear-gradient(120deg, #4794c7 30%,  #92caf8 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
   color: white;
   transform: rotateY(180deg);
 }
@@ -127,7 +131,7 @@ body {
   width: 270px;
   height: 254px;
   perspective: 1000px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Oswald", sans-serif;
   cursor: pointer;
   display: inline-block;
   padding: 30px 30px 30px 15px;
@@ -170,12 +174,12 @@ body {
 }
 
 .flip-card-front1 {
-  background: linear-gradient(120deg, rgb(154, 171, 231) 30%, rgb(107, 118, 175) 88%, rgb(201, 210, 241) 40%, rgb(166, 185, 220) 78%);
+  background: linear-gradient(120deg, rgb(145, 108, 233) 30%, #b37de6 88%, rgb(201, 210, 241) 40%, rgb(201, 190, 230) 78%);
   color: rgb(255, 255, 255);
 }
 
 .flip-card-back1 {
-  background: linear-gradient(120deg, rgb(171, 197, 203) 30%, rgb(82, 128, 151) 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
+  background: linear-gradient(120deg, #4794c7 30%,  #92caf8 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
   color: white;
   transform: rotateY(180deg);
 }
@@ -186,7 +190,7 @@ body {
   width: 270px;
   height: 254px;
   perspective: 1000px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Oswald", sans-serif;
   cursor: pointer;
   display: inline-block;
   padding: 30px 30px 30px 15px;
@@ -228,27 +232,31 @@ body {
 }
 
 .flip-card-front2 {
-  background: linear-gradient(120deg, rgb(154, 171, 231) 30%, rgb(107, 118, 175) 88%, rgb(201, 210, 241) 40%, rgb(166, 185, 220) 78%);
+  background: linear-gradient(120deg, rgb(145, 108, 233) 30%, #b37de6 88%, rgb(201, 210, 241) 40%, rgb(201, 190, 230) 78%);
   color: rgb(255, 255, 255);
 }
 
 .flip-card-back2 {
-  background: linear-gradient(120deg, rgb(171, 197, 203) 30%, rgb(82, 128, 151) 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
+  background: linear-gradient(120deg, #4794c7 30%,  #92caf8 88%, rgb(178, 205, 216) 40%, rgb(171, 207, 228) 78%);
   color: white;
   transform: rotateY(180deg);
 }
 
-
+/* Media queries for responsiveness */
 @media (max-width: 1500px) {
   .container {
-      flex-wrap: nowrap;
+      flex-wrap: nowrap;/* Prevent wrapping on smaller screens */
   }
+
 }
+
+
 
 @media (max-width: 1350px) {
   #stuff {
-      width: 1000px;
+      width: 1000px;/* Adjust width for smaller screens */
   }
+  
 }
 
 @media (max-width: 1100px) {
@@ -272,5 +280,59 @@ body {
 @media (max-width: 500px) {
   #stuff {
       width: 300px;
+  }
+}
+
+
+
+/* Overlay menu styling */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: "Titan One", sans-serif;
+  font-size: 40px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  font-size: 90px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
   }
 }
