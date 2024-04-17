@@ -7,12 +7,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'hello/BigJohnEXHIBIT.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/exhibits.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=Madimi+One&family=Nabla&family=Protest+Revolution&family=Protest+Riot&family=Scope+One&family=Truculenta:opsz@12..72&display=swap" rel="stylesheet">
 
-    <title>Big John</title>
+    <title>Exhibit Select</title>
 
 
 </head>
@@ -21,46 +21,154 @@
 <body>
         <header>
 
-                <div class="card">
+                <div class="Base1">
                     <div class="header-content">
-                        <h1 class="maintitle">Big John</h1>
-                        <nav>
-                            <ul>
-                                <li><a href="{% url 'home' %}">Home</a></li>
-                                <li><a href="{% url 'help' %}">Help</a></li>
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
-                            </ul>
-                        </nav>                        
+                        <h1 class="maintitle">Exhibit</h1>
                     </div>
                 </div>
             
         </header>
             <main>
-                    <div class="maininf">
-                        <div class="texthold1">
-                            <img src="{% static 'images/BIG-JOHN.jpg' %}" alt="Big Ole' John In DA Flesh">
-                        </div>
-                            
+                <div class="grid-container">
+<!-- Art -->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/tartsmart.png' %}" alt="Photo 1"> 
+                      <div class="text-overlay">
+                        <h1>Art Smart</h1>
+                        
+                      </div>
+                      </button>
+                    
+<!-- BigJ -->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/BIG-JOHN.jpg' %}" alt="Photo 2">
+                      <div class="text-overlay">
+                        <h1>Big John</h1>
+                        
+                      </div>
+                    </button>
 
-                        <div class="Base2">
-                            <div class="content">
-                                <h2 class="title">Exhibit Info</h2>
-                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis magna quis lectus fermentum, quis scelerisque orci pellentesque. Duis id porta justo. Sed ac enim id justo tincidunt hendrerit id ac lectus. Pellentesque maximus posuere tortor vitae consequat.</p>
-                            </div>
-                        </div>
+<!-- Bank -->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/bankkBCKGRND.png' %}" alt="Photo 2">
+                      <div class="text-overlay">
+                        <h1>Central Bank</h1>
+                        
+                      </div>
+                    </button>
 
-                        <div class="Base3">
-                            <div class="toPLAY">
-                            <h2 class="playTITLE">What play is happening?</h2>
-                              <button class="btn" onclick="navigateToLink(event, 'link1.html')">Object</button> 
-                              <button class="btn" onclick="navigateToLink(event, 'link2.html')">Creative</button>
-                              <button class="btn" onclick="navigateToLink(event, 'link3.html')">Social</button>
-                            </div>
-                            
+<!--EngWrkshp-->    <button class="grid-item" type="button">
+                      <img src="{% static 'images/engworkshopBCKRND.png' %}" alt="Photo 2">
+                      <div class="text-overlay">
+                        <h1>Engineers' Workshop</h1>
+                        
+                      </div>
+                    </button>
 
-                        </div>
-                    </div>
-                
+<!-- Farm -->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/tfarm.png' %}" alt="FARM">
+                      <div class="text-overlay">
+                        <h1>Farm</h1>
+                        
+                      </div>
+                    </button>
+
+<!-- Fire -->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/tfire.png' %}" alt="Firhouse">
+                      <div class="text-overlay">
+                        <h1>Firehouse</h1>
+                       
+                      </div>
+                    </button>
+
+<!-- Cafe -->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/tcafe.png' %}" alt="Cafe">
+                      <div class="text-overlay">
+                        <h1>Global Café</h1>
+                        
+                      </div>
+                    </button>
+
+<!--ICecream-->     <button class="grid-item" type="button">
+                      <img src="{% static 'images/ticecream.png' %}" alt="Ice Cream">
+                      <div class="text-overlay">
+                        <h1>Ice Cream Parlor</h1>
+                        
+                      </div>
+                    </button>
+
+<!--Kidsport-->     <button class="grid-item" type="button">
+                      <img src="{% static 'images/tkidport.png' %}" alt="Kidsport">
+                      <div class="text-overlay">
+                        <h1>Kidsport</h1>
+                        
+                      </div>
+                    </button>
+
+<!--Light Cloud --> <button class="grid-item" type="button">
+                      <img src="{% static 'images/tlightcloud.png' %}" alt="LightCloud">
+                      <div class="text-overlay">
+                        <h1>Light Cloud</h1>
+                        
+                      </div>
+                    </button>
+
+<!--Pizza-->        <button class="grid-item" type="button">
+                      <img src="{% static 'images/tpizza.png' %}" alt="PIZZA">
+                      <div class="text-overlay">
+                        <h1>Pizza Place</h1>
+                        
+                      </div>
+                    </button>
+
+<!--Publix-->       <button class="grid-item" type="button">
+                      <img src="{% static 'images/tpublix.png' %}" alt="Publix">
+                      <div class="text-overlay">
+                        <h1>Publix</h1>
+                        
+                      </div>
+                    </button>
+
+<!--C Hospital -->  <button class="grid-item" type="button">
+                      <img src="{% static 'images/tchildrenh.png' %}" alt="Children's Hospital">
+                      <div class="text-overlay">
+                        <h1>St. Joseph's Children's Hospital</h1>
+                        
+                      </div>
+                    </button>
+
+<!--TUG TOTS-->     <button class="grid-item" type="button">
+                      <img src="{% static 'images/ttugboat.png' %}" alt="Tugboat">
+                      <div class="text-overlay">
+                        <h1>Tugboat Tots</h1>
+                        
+                      </div>
+                    </button>
+
+<!--TWINKLE-->      <button class="grid-item" type="button">
+                      <img src="{% static 'images/ttwinklestar.png' %}" alt="Twinkle Stars">
+                      <div class="text-overlay">
+                        <h1>Twinkle Stars Theater</h1>
+                        
+                      </div>
+                    </button>
+
+<!-- Vet -->        <button class="grid-item" type="button">
+                      <img src="{% static 'images/tvet.png' %}" alt="Vet Clinic">
+                      <div class="text-overlay">
+                        <h1>Vet Clinic</h1>
+                       
+                      </div>
+                    </button>
+
+<!-- Water -->      <button class="grid-item" type="button">
+                      <img src="{% static 'images/twjourney.png' %}" alt="Water's Journey">
+                      <div class="text-overlay">
+                        <h1>Water's Journey</h1>
+                       
+                      </div>
+                    </button>
+                    
+                  </div>
+                  
+                             
             </main>
 
 <footer> <!--footer begins-->
