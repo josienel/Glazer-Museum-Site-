@@ -157,8 +157,8 @@ nav ul li a {
   /* Further adjust button padding */
   .grid-item {
     padding: 10px; /* Adjust as needed */
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   /* Grid layout adjustments */
@@ -166,6 +166,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Change to 2 column */
     gap: 2px; /* Reduce gap between grid items */
+    overflow: auto;
   }
 }
 
@@ -226,3 +227,4 @@ nav ul li a {
 }
 
 
+/* I wan the the gird to take the size of what ever screen without horizontal scroll */
