@@ -43,4 +43,5 @@ urlpatterns= [
     path('playselect/whatsdownthere', views.whats_down_there, name='whats_down_there'),
     path('playselect/surelyyourejoking', views.surely_youre_joking, name='surely_youre_joking'),
     path('playselect/letters', views.letters, name='letters'),
+    path('exhibits/artsmart', views.artsmart, name="artsmart"),
 ]

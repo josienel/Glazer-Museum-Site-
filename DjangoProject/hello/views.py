@@ -146,6 +146,10 @@ def surely_youre_joking(request):
 def letters(request):
     return render(request, 'hello/letters.html')
 
+#Exhibits
+def artsmart(request):
+    return render(request, 'hello/artsmart.html')
+
 
 #External Links
 #Calendar
