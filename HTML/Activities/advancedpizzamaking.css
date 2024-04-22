@@ -1,12 +1,12 @@
 /*fonts */
 .protest-riot-regular {
-  font-family: "Protest Riot", sans-serif;
+  font-family: "Titan One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .scope-one-regular {
-  font-family: "Scope One", serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -74,10 +74,10 @@ nav ul li {
 
 /* nav is smaller scope indivduals, influence to words and links */
 nav ul li a {
-  font-family: "Scope One", serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #559aa3;
+  color: #3a9bbe;
   font-weight: bolder;
   font-size: 32px;
 }
@@ -161,7 +161,7 @@ nav ul li a {
 }
 /* Words in the box Labeled Activity description */
 .description {
-  font-family: "Scope One", serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-left: 30px;
@@ -218,7 +218,7 @@ nav ul li a {
   .Base3 {
     font-size: auto;
     width: 90%;
-    margin-left: auto;
+    margin-left: 3%;
     margin-right: auto;
     height: auto;
   }
@@ -232,9 +232,16 @@ nav ul li a {
 
   /* the area that the picture of exhibit will sit in */
   .Base2 {
-    width: 90%;
-    height: auto;
-    margin-top: 5%;
+    width: 80%;
+    height: 70%;
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  .Base2 img{
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
   }
 
   /* Big title in main box */
@@ -244,14 +251,20 @@ nav ul li a {
 
   /*area that will hold the buttons and title "What play is happening" */
   .Base4 {
-    width: 90%;
-    margin: 0 auto;
+    width: 70%;
+    margin-left: 1%;
     margin-bottom: 5%;
     padding-bottom: 3%;
     display: contents;
     flex-direction: column;
     align-items: center;
   }
+
+  .Base5, .Base6{
+    width: 90%;
+    margin-left: 4%;
+  }
+
 
   /*the play title "what play is happening?" */
   .playTITLE {
@@ -275,11 +288,13 @@ nav ul li a {
     align-items: center;
     padding: 10px;
     flex-direction: column;
+    
   }
 
   /* even smaller telling all 3 grouping what their spacing is */
   .Base4 .toPLAY .btn {
     margin: 10px 0;
+    
   }
 
   /* nav as group */
