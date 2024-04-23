@@ -101,9 +101,13 @@ nav ul li a {
 /*    SCREEN ADJUSTMENTS  */
 @media only screen and (max-width: 1200px) {
   .grid-container {
-      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+    
   }
-  
+  .Base1 {
+    width: 90%;
+    margin: 0 auto; /* Center horizontally */
+  }
 }
 
 /* Adjustments for smaller screens */
@@ -111,6 +115,7 @@ nav ul li a {
   /* the whole box of Main title */
   .Base1 {
     width: 90%;
+    margin: 0 auto; /* Center horizontally */
   }
 
   /* Big title in main box */
@@ -130,26 +135,25 @@ nav ul li a {
   /* Adjust button padding */
   .grid-item {
     padding: 15px; /* Adjust as needed */
-    size: content-box;
+    box-sizing: content-box; /* Corrected property name */
   }
 
   /* Grid layout adjustments */
   .grid-container {
     grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
     gap: 5px; /* Reduce gap between grid items */
+    margin-left: auto;
+    margin-left: 10%;
   }
 }
 
-
-
-
-
 /* Additional adjustments for even smaller screens */
 @media only screen and (max-width: 480px) {
-   /* the whole box of Main title */
+  /* the whole box of Main title */
   .Base1 {
     padding: 5px; /* Adjust padding */
   }
+
   .grid-item h1 {
     font-size: 1rem; /* Adjust as needed */
   }
@@ -166,9 +170,11 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Change to 2 column */
     gap: 2px; /* Reduce gap between grid items */
-    overflow: auto;
+    margin-left: 10%;
+    
   }
 }
+
 
 
 /* effect when button being hovered on */
@@ -185,11 +191,12 @@ nav ul li a {
 
 
 .grid-container {
+  padding: 3em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-top: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Corrected */
+  grid-gap: 2em;
 }
+
 
 .grid-item {
   display: flex;
@@ -205,6 +212,8 @@ nav ul li a {
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   padding: 10px;
   position: relative;
+  width: 200px;
+  height: 200px;
 }
 
 .grid-item img {
@@ -224,6 +233,10 @@ nav ul li a {
   color: white; /* Optional: set text color for better visibility */
   padding: 5px; /* Optional: add padding for spacing */
   border-radius: 10px;
+  font-size: larger;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 
