@@ -111,7 +111,7 @@ nav ul li a {
 /* area for the activity info to be positioned */
 .Base3 {
   width: 600px;
-  height: auto;
+  height:auto;
   border-radius: 30px;
   background: rgb(238, 236, 236);
   border-color:  #accdd2;
@@ -124,7 +124,7 @@ nav ul li a {
 /* area for the activity extension info to be positioned */
 .Base5 {
   width: 600px;
-  height: 354px;
+  height: auto;
   border-radius: 30px;
   background: rgb(238, 236, 236);
   border-color:  #accdd2;
@@ -136,7 +136,7 @@ nav ul li a {
 }
 .Base6 {
   width: 600px;
-  height: 354px;
+  height: auto;
   border-radius: 30px;
   background: rgb(238, 236, 236);
   border-color:  #accdd2;
