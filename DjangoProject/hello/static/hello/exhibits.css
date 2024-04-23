@@ -1,226 +1,241 @@
 /*fonts */
 .protest-riot-regular {
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.scope-one-regular {
+  font-family: "Scope One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* set background */
+body {
+  background-image: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* the whole box of Main title */
+
+.Base1 {
+  width: 70rem;
+  box-sizing: content-box;
+  margin: auto; /* Combined margin-left and margin-right */
+  border-radius: 1rem;
+  position: relative;
+  background-color: rgb(238, 236, 236);
+  background-image: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* inside top box */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Big title in main box */
+.maintitle {
+  font-family: "Scope One", serif;
+  font-size: 6rem;
+  font-weight: bolder;
+  color: #0eebeb;
+  margin-bottom: 20px;
+}
+
+/* nav as group */
+nav ul {
+  list-style-type: none;
+  padding: 12px; /* Added 'px' unit */
+  margin: 0;
+  word-spacing: 11rem;
+}
+
+/* nav as large outer scope individuals */
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* nav is smaller scope indivduals, influence to words and links */
+nav ul li a {
+  font-family: "Scope One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #559aa3;
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+
+
+
+/*    SCREEN ADJUSTMENTS  */
+@media only screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+    
   }
-  
-  .scope-one-regular {
-    font-family: "Scope One", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  
-  /* set background */
-  body {
-    background-image: white;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  
-  /* the whole box of Main title */
-  
   .Base1 {
-    width: 70rem;
-    box-sizing: content-box;
-    margin: auto; /* Combined margin-left and margin-right */
-    border-radius: 1rem;
-    position: relative;
-    background-color: rgb(238, 236, 236);
-    background-image: white;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    width: 90%;
+    margin: 0 auto; /* Center horizontally */
   }
-  
-  /* inside top box */
-  .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  /* the whole box of Main title */
+  .Base1 {
+    width: 90%;
+    margin: 0 auto; /* Center horizontally */
   }
-  
+
   /* Big title in main box */
   .maintitle {
-    font-family: "Scope One", serif;
-    font-size: 6rem;
-    font-weight: bolder;
-    color: #cfb355;
-    margin-bottom: 20px;
+    font-size: 4rem;
   }
-  
+
   /* nav as group */
   nav ul {
-    list-style-type: none;
-    padding: 12px; /* Added 'px' unit */
-    margin: 0;
-    word-spacing: 11rem;
+    word-spacing: 0rem;
   }
-  
-  /* nav as large outer scope individuals */
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
+
+  .grid-item h1 {
+    font-size: 1.2rem; /* Adjust as needed */
   }
-  
-  /* nav is smaller scope indivduals, influence to words and links */
-  nav ul li a {
-    font-family: "Scope One", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #559aa3;
-    font-weight: bolder;
-    font-size: 32px;
+
+  /* Adjust button padding */
+  .grid-item {
+    padding: 15px; /* Adjust as needed */
+    box-sizing: content-box; /* Corrected property name */
   }
-  
-  
-  /* the area that the picture of exhibit will sit in */
-  
-  
-  
-  
-  
-  
-  /* title of box that has info and text refraining to exhibit*/
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /*    SCREEN ADJUSTMENTS  */
-  @media only screen and (max-width: 1200px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
-    }
-    
+
+  /* Grid layout adjustments */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    gap: 5px; /* Reduce gap between grid items */
+    margin-left: auto;
+    margin-left: 10%;
   }
-  
-  /* Adjustments for smaller screens */
-  @media only screen and (max-width: 768px) {
-    /* the whole box of Main title */
-    .Base1 {
-      width: 90%;
-    }
-  
-    /* Big title in main box */
-    .maintitle {
-      font-size: 4rem;
-    }
-  
-    /* nav as group */
-    nav ul {
-      word-spacing: 0rem;
-    }
-  
-    .grid-item h1 {
-      font-size: 1.2rem; /* Adjust as needed */
-    }
-  
-    /* Adjust button padding */
-    .grid-item {
-      padding: 15px; /* Adjust as needed */
-      size: content-box;
-    }
-  
-    /* Grid layout adjustments */
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
-      gap: 5px; /* Reduce gap between grid items */
-    }
+}
+
+/* Additional adjustments for even smaller screens */
+@media only screen and (max-width: 480px) {
+  /* the whole box of Main title */
+  .Base1 {
+    padding: 5px; /* Adjust padding */
   }
-  
-  
-  
-  
-  
-  /* Additional adjustments for even smaller screens */
-  @media only screen and (max-width: 480px) {
-     /* the whole box of Main title */
-    .Base1 {
-      padding: 5px; /* Adjust padding */
-    }
-    .grid-item h1 {
-      font-size: 1rem; /* Adjust as needed */
-    }
-  
-    /* Further adjust button padding */
-    .grid-item {
-      padding: 10px; /* Adjust as needed */
-      width: 100px;
-      height: 100px;
-    }
-  
-    /* Grid layout adjustments */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Change to 2 column */
-      gap: 2px; /* Reduce gap between grid items */
-    }
+
+  .grid-item h1 {
+    font-size: 1rem; /* Adjust as needed */
   }
-  
-  
-  /* effect when button being hovered on */
-  .grid-item:hover {
-    transform: translateY(3px);
-    box-shadow: none;
+
+  /* Further adjust button padding */
+  .grid-item {
+    padding: 10px; /* Adjust as needed */
+    width: 200px;
+    height: 200px;
   }
-  
-  /* effect when button being clicked */
-  .grid-item:active {
-    opacity: 0.5;
-  }
-  
-  
-  
+
+  /* Grid layout adjustments */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 25px;
-  }
-  
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #f4fbf5;
-    border-color: #f4fbf5;
-    border-radius: 1rem;
-    cursor: pointer;
-    background-image: white;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .grid-item img {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 column */
+    gap: 2px; /* Reduce gap between grid items */
+    margin-left: 10%;
     
   }
+}
+
+
+
+/* effect when button being hovered on */
+.grid-item:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* effect when button being clicked */
+.grid-item:active {
+  opacity: 0.5;
+}
+
+
+/* Controls the main grid */
+.grid-container {
+  padding: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Allows for proper distribution of grid*/
+  grid-gap: 2em;
+}
+
+/* controls individual grid items */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f4fbf5;
+  border-color: #f4fbf5;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-image: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  padding: 10px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.grid-item img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
   
-  .grid-item h1 {
-    font-size: fit-content;
-    position: absolute;
-    top: 50%; /* Adjust to center text vertically */
-    left: 50%; /* Adjust to center text horizontally */
-    transform: translate(-50%, -50%); /* Centering the text overlay */
-    /* Add any additional styling for the text overlay here */
-    color: white; /* Optional: set text color for better visibility */
-    padding: 5px; /* Optional: add padding for spacing */
-    border-radius: 10px;
-  }
+}
+
+.grid-item h1 {
+  font-size: fit-content;
+  overflow: wrap;
+  position: absolute;
+  top: 50%; /* Adjust to center text vertically */
+  left: 50%; /* Adjust to center text horizontally */
+  transform: translate(-50%, -50%); /* Centering the text overlay */
+  
+  padding: 5px; /* Optional: add padding for spacing */
+  border-radius: 10px;
+  font-size: 17.5px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: rgb(243, 244, 245);
+  text-shadow: 0 1px 0 #ccc,  /* 3D text */
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+}
+
+

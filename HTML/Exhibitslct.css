@@ -52,7 +52,7 @@ body {
   font-family: "Scope One", serif;
   font-size: 6rem;
   font-weight: bolder;
-  color: #cfb355;
+  color: #0eebeb;
   margin-bottom: 20px;
 }
 
@@ -79,21 +79,6 @@ nav ul li a {
   font-weight: bolder;
   font-size: 32px;
 }
-
-
-/* the area that the picture of exhibit will sit in */
-
-
-
-
-
-
-/* title of box that has info and text refraining to exhibit*/
-
-
-
-
-
 
 
 
@@ -189,15 +174,15 @@ nav ul li a {
 }
 
 
-
+/* Controls the main grid */
 .grid-container {
   padding: 3em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Corrected */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Allows for proper distribution of grid*/
   grid-gap: 2em;
 }
 
-
+/* controls individual grid items */
 .grid-item {
   display: flex;
   flex-direction: column;
@@ -225,19 +210,32 @@ nav ul li a {
 
 .grid-item h1 {
   font-size: fit-content;
+  overflow: wrap;
   position: absolute;
   top: 50%; /* Adjust to center text vertically */
   left: 50%; /* Adjust to center text horizontally */
   transform: translate(-50%, -50%); /* Centering the text overlay */
-  /* Add any additional styling for the text overlay here */
-  color: white; /* Optional: set text color for better visibility */
+  
   padding: 5px; /* Optional: add padding for spacing */
   border-radius: 10px;
-  font-size: larger;
+  font-size: 17.5px;
   font-family: "Protest Riot", sans-serif;
   font-weight: 900;
   font-style: normal;
+  color: rgb(243, 244, 245);
+  text-shadow: 0 1px 0 #ccc,  /* 3D text */
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
 }
 
 
-/* I wan the the gird to take the size of what ever screen without horizontal scroll */
