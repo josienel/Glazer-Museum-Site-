@@ -1,5 +1,7 @@
 from django.urls import path
 from hello import views
+from .views import activity_data
+
 
 urlpatterns= [
     path("hello/<name>", views.hello_there, name="hello_there"),
@@ -44,4 +46,11 @@ urlpatterns= [
     path('playselect/surelyyourejoking', views.surely_youre_joking, name='surely_youre_joking'),
     path('playselect/letters', views.letters, name='letters'),
     path('exhibits/artsmart', views.artsmart, name="artsmart"),
+    path('exhibits/BigJohnEXHIBIT', views.BigJohnEXHIBIT, name="BigJohnEXHIBIT"),
+    path('exhibits/centralB', views.centralB, name='centralB'),
+    path('exhibits/engworkshop', views.engworkshop, name='engworkshop'),
+    path('exhibits/farm', views.farm, name='farm'),
+    path('exhibits/firehouse', views.firehouse, name='firehouse'),
+    path('api/activities/', activity_data, name='activity_data'),
+
 ]

@@ -66,8 +66,8 @@ Art Smart
 <footer> <!--footer begins-->
     <p>Copyright © 2024 Glazer Children's Museum</p>
 </footer> <!--footer ends-->
-        <script src="../Database/Code/fetchDataFromSheet.js"></script>
-        <script>
+<script src="{% static 'hello/fetchDataFromSheet.js' %}"></script>
+<script>
             // Get activity name from specific rows/columns in Activities sheet
             fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity1', 16, [1]);
             fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity2', 21, [1]);

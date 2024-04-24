@@ -1,6 +1,8 @@
 {% extends "hello/layout.html" %}
 {% load static %}
-{% block title %}Exhibits{% endblock %}
+{% block title %}
+Exhibits
+{% endblock %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -30,14 +32,16 @@
         </header>
             <main>
                 <div class="grid-container">
+                  <a href="{% url 'artsmart' %}">
 <!-- Art -->       <button class="grid-item" type="button">
                       <img src="{% static 'images/tartsmart.png' %}" alt="Photo 1"> 
                       <div class="text-overlay">
                         <h1>Art Smart</h1>
-                        
                       </div>
                       </button>
-                    
+                    </a>
+                  
+                  <a href="{% url 'BigJohnEXHIBIT' %}">
 <!-- BigJ -->       <button class="grid-item" type="button">
                       <img src="{% static 'images/BIG-JOHN.jpg' %}" alt="Photo 2">
                       <div class="text-overlay">
@@ -45,7 +49,9 @@
                         
                       </div>
                     </button>
+                  </a>
 
+                  <a href="{% url 'centralB' %}">
 <!-- Bank -->       <button class="grid-item" type="button">
                       <img src="{% static 'images/bankkBCKGRND.png' %}" alt="Photo 2">
                       <div class="text-overlay">
@@ -53,7 +59,9 @@
                         
                       </div>
                     </button>
+                  </a>
 
+                  <a href="{% url 'engworkshop' %}">
 <!--EngWrkshp-->    <button class="grid-item" type="button">
                       <img src="{% static 'images/engworkshopBCKRND.png' %}" alt="Photo 2">
                       <div class="text-overlay">
@@ -61,7 +69,9 @@
                         
                       </div>
                     </button>
+                  </a>
 
+                  <a href="{% url 'firehouse' %}">
 <!-- Farm -->       <button class="grid-item" type="button">
                       <img src="{% static 'images/tfarm.png' %}" alt="FARM">
                       <div class="text-overlay">
@@ -77,6 +87,7 @@
                        
                       </div>
                     </button>
+                  </a>
 
 <!-- Cafe -->       <button class="grid-item" type="button">
                       <img src="{% static 'images/tcafe.png' %}" alt="Cafe">

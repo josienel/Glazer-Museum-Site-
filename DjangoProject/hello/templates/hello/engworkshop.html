@@ -1,7 +1,7 @@
 {% extends "hello/layout.html" %}
 {% load static %}
 {% block title %}
-Twinkle Star Theatre
+Engineers Workshop
 {% endblock %}
 {% block content %}
 <!DOCTYPE html>
@@ -9,73 +9,57 @@ Twinkle Star Theatre
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'hello/twinklestartheater.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/engworkshop.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=Madimi+One&family=Nabla&family=Protest+Revolution&family=Protest+Riot&family=Scope+One&family=Truculenta:opsz@12..72&display=swap" rel="stylesheet">
 
-    <!-- name of activity appearing on table -->
-    <title>Twinkle Star Theater</title>
+    <title>Engineers’ Workshop</title>
 
 
 </head>
 <div class="background">
 
-    <body>
-    <header>
+<body>
+        <header>
 
-        <div class="Base1">
-            <div class="header-content">
-                <h1 id="activity-name" class="maintitle"></h1>
-            </div>
-        </div>
-
-    </header>
-    <main>
-        <div class="maininf">
-            <div class="Base2">
-                <img src="{% static 'images/ART-SMART.jpg' %}" alt="Children's Hospital">
-            </div>
-
-
-            <div class="Base3">
-                <div class="content">
-                    <h2 class="title">Activity Description</h2>
-                    <p id="activity-desc" class="description"> </p>
+                <div class="Base1"><!-- Acts the maininf-->
+                    <div class="header-content"> <!-- header content acts as Base2,3,4-->
+                        <h1 id="exhibit-name" class="maintitle"></h1>
+                    </div>
                 </div>
-            </div>
+            
+        </header>
+            <main>
+                    <div class="maininf">
+                        <div class="Base2">
+                            <img src="{% static 'images/ART-SMART.jpg' %}" alt="ART SMART">
+                        </div>
+                            
 
-            <div class="Base5">
-                <div class="content">
-                    <h2 class="title">Activity Extension</h2>
-                    <p id="activity-extension" class="description"> </p>
-                </div>
-            </div>
+                        <div class="Base3">
+                            <div class="content">
+                                <h2 class="title">Exhibit Info</h2>
+                                <p id="exhibit-description" class="description"></p>
+                            </div>
+                        </div>
 
-            <div class="Base6">
-                <div class="content">
-                    <h2 class="title">What was learned?</h2>
-                    <p id="activity-learned" class="description"> </p>
-                </div>
-            </div>
+                        <div class="Base4">
+                            <div class="toPLAY">
+                            <h2 class="playTITLE">Activities?</h2>
+                              <button id="activity1" class="btn" onclick="navigateToLink(event, 'link1.html')"></button>
+                              <button id="activity2" class="btn" onclick="navigateToLink(event, 'link2.html')">Creative</button>
+                              </div>
+                            
 
-            <!-- <div class="Base4">
-                 <div class="toPLAY">
-                 <h2 class="playTITLE">What play is happening?</h2>
-                   <button class="btn" onclick="navigateToLink(event, 'link1.html')">Object</button>
-                   <button class="btn" onclick="navigateToLink(event, 'link2.html')">Creative</button>
-                   <button class="btn" onclick="navigateToLink(event, 'link3.html')">Social</button>
-                 </div>
+                        </div>
+                    </div>
+                
+            </main>
 
-
-             </div> -->
-        </div>
-
-    </main>
-
-    <footer> <!--footer begins-->
-        <p>Copyright © 2024 Glazer Children's Museum</p>
-    </footer> <!--footer ends-->
+<footer> <!--footer begins-->
+    <p>Copyright © 2024 Glazer Children's Museum</p>
+</footer> <!--footer ends-->
 
     <script>
         function fetchActivityData() {
@@ -104,7 +88,7 @@ Twinkle Star Theatre
         
         document.addEventListener('DOMContentLoaded', fetchActivityData);
     </script>
-    </body>
+</body>
 </div>
 </html>
 {% endblock %}

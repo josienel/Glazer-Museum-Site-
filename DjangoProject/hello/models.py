@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+import csv
 
 # Create models here.
 #Activity model
@@ -11,6 +14,36 @@ class Activity(models.Model):
 
     def __str__(self):
         return self.activity_name
+    
+
+@receiver(post_save, sender=Activity)
+def update_csv(sender, instance, created, **kwargs):
+    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/activities.csv'
+    
+    # Open the file in read mode to check content and then append/update accordingly
+    with open(file_path, mode='r', newline='') as file:
+        reader = csv.reader(file)
+        header = next(reader)  # Read the header row
+        data = list(reader)
+
+    updated_data = []
+    found = False
+    for row in data:
+        if int(row[0]) == instance.activity_ID:
+            # Update the row if the activity_ID matches
+            row = [str(instance.activity_ID), instance.activity_name, instance.act_desc, instance.activity_extend, instance.whats_learned]
+            found = True
+        updated_data.append(row)
+
+    if not found and created:
+        # Append new entry if not found and the instance is newly created
+        updated_data.append([str(instance.activity_ID), instance.activity_name, instance.act_desc, instance.activity_extend, instance.whats_learned])
+
+    # Write updated data back to CSV including the header
+    with open(file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(header)  # Write the header first
+        writer.writerows(updated_data)
 
 
 #Play model
