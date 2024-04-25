@@ -13,8 +13,9 @@ from .models import Exhibit
 
 
 #Update database
+'''
 def display_activities(request):
-    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/activities.csv'
+    file_path = 'hello/csv_files/activities.csv'
     activities = []
     with open(file_path, mode='r', newline='') as file:
         reader = csv.DictReader(file)
@@ -22,9 +23,10 @@ def display_activities(request):
             activities.append(row)
 
     return render(request, 'hello/activities_list.html', {'activities': activities})
+'''
 
 def activity_data(request):
-    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/activities.csv'
+    file_path = 'hello/csv_files/activities.csv'
     data = []
     with open(file_path, mode='r', newline='') as file:
         reader = csv.DictReader(file)
