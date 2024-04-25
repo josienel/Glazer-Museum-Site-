@@ -6,6 +6,40 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
 from .forms import ContactForm
+import csv
+from django.http import JsonResponse
+from .models import Exhibit
+
+
+
+#Update database
+def display_activities(request):
+    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/activities.csv'
+    activities = []
+    with open(file_path, mode='r', newline='') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            activities.append(row)
+
+    return render(request, 'hello/activities_list.html', {'activities': activities})
+
+def activity_data(request):
+    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/activities.csv'
+    data = []
+    with open(file_path, mode='r', newline='') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            data.append(row)
+    return JsonResponse(data, safe=False)
+
+def exhibit_data(request):
+    try:
+        exhibits = list(Exhibit.objects.values('exhibit_id', 'ex_name', 'ex_desc'))
+        return JsonResponse(exhibits, safe=False)
+    except Exception as e:
+        print("Error while fetching exhibit data from the database:", e)
+        return JsonResponse({'error': 'An error occurred'}, status=500)
+
 
 #Home page
 def home(request):
@@ -149,6 +183,22 @@ def letters(request):
 #Exhibits
 def artsmart(request):
     return render(request, 'hello/artsmart.html')
+def BigJohnEXHIBIT(request):
+    return render(request, 'hello/BigJohnEXHIBIT.html')
+def centralB(request):
+    return render(request, 'hello/centralB.html')
+def engworkshop(request):
+    return render(request, 'hello/engworkshop.html')
+def farm(request):
+    return render(request, 'hello/farm.html')
+def firehouse(request):
+    return render(request, 'hello/firehouse.html')
+def globecafe(request):
+    return render(request, 'hello/globecafe.html')
+def lightcloud(request):
+    return render(request, 'hello/lightcloud.html')
+def icecream(request):
+    return render (request, 'hello/icecream.html')
 
 
 #External Links

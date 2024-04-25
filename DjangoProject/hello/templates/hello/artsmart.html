@@ -22,6 +22,8 @@ Art Smart
 
 <body>
         <header>
+            <div id="exhibit-container" data-exhibit-name="{{'Art Smart'}}">
+
 
                 <div class="Base1">
                     <div class="header-content">
@@ -66,30 +68,33 @@ Art Smart
 <footer> <!--footer begins-->
     <p>Copyright © 2024 Glazer Children's Museum</p>
 </footer> <!--footer ends-->
-        <script src="../Database/Code/fetchDataFromSheet.js"></script>
-        <script>
-            // Get activity name from specific rows/columns in Activities sheet
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity1', 16, [1]);
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity2', 21, [1]);
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity3', 17, [1]);
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity4', 18, [1]);
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity5', 19, [1]);
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vQBl69afb_cgpZVT44OS2S_BB4RIvzmKHddsqjHm7I5wGFVd7oPZh6VHAGLFNgxVZezvhyJwzGNHPSL/pubhtml', 'activity6', 20, [1]);
 
+<script>
+    function fetchExhibitData() {
+        fetch('/api/exhibits/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);  // Log the data to inspect what's being fetched
+                // Update this line to match the exhibit name exactly as it appears in your data
+                const targetExhibit = data.find(exhibit => exhibit.ex_name === "Art Smart");
+                console.log(targetExhibit);
+        
+                if (targetExhibit) {
+                    document.getElementById('exhibit-name').textContent = targetExhibit.ex_name;
+                    document.getElementById('exhibit-description').textContent = targetExhibit.ex_desc;
+                } else {
+                    console.log('Exhibit not found');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching exhibits:', error);
+                alert('Failed to fetch exhibits. Please check the console for more details.');
+            });
+    }
+    
+    document.addEventListener('DOMContentLoaded', fetchExhibitData);
+</script>
 
-
-
-
-
-            // Get exhibit description from specific row/column in Exhibits sheet
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'exhibit-description', 2, [2]);
-
-            // Get exhibit name from specific row/column in Exhibits sheet
-            fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHwFT82gpebCv6H0pBCbu1aBhctzZlk1Pe8jJnT0NW4YdP1EzhomfeOwUrbjhbUGODmk1i8krH61ZB/pubhtml', 'exhibit-name', 2, [1]);
-
-            // Get data from specific place in Play sheet
-            // fetchDataFromSheet('https://docs.google.com/spreadsheets/d/e/2PACX-1vTkqEmuHqTQsMav20F97U1_rL9yt-PW2T4LgUrSRzT4FSR54kJXbrsIqnqzM5qtJY0quUfv9-DQypWW/pubhtml', 'play-info', 2, [2]);
-        </script>
 </body>
 </div>
 </html>
