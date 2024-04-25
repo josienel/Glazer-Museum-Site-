@@ -1,0 +1,111 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}
+Childrens Hospital Exhibit
+{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/childrenshospitalSTYLE.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=Madimi+One&family=Nabla&family=Protest+Revolution&family=Protest+Riot&family=Scope+One&family=Truculenta:opsz@12..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>St. Joseph’s Children’s Hospital</title>
+
+
+</head>
+<div class="background">
+
+<body>
+
+    <section class="sticky">
+        <div class="bubbles">
+            <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          
+        </div>
+      </section>
+
+        <header>
+
+                <div class="Base1">
+                    <div class="header-content">
+                        <h1 id="exhibit-name" class="maintitle"></h1>
+                    </div>
+                </div>
+            
+        </header>
+            <main>
+                    <div class="maininf">
+                        <div class="Base2">
+                            <img src="ART-SMART.jpg" alt="Children's Hospital">
+                        </div>
+                            
+
+                        <div class="Base3">
+                            <div class="content">
+                                <div align  = "Center">
+                                <p class="title">Exhibit Info</p></div>
+                                <p id="exhibit-description" class="description"> </p>
+                            </div>
+                        </div>
+
+                        <div class="Base4">
+                            <div class="toPLAY">
+                                <div align  = "Center">
+                            <p class="playTITLE">Activities?</p></div>
+                              <button id="activity1" class="btn" onclick="navigateToLink(event, 'link1.html')"></button>
+                              <button id="activity2" class="btn" onclick="navigateToLink(event, 'link2.html')"></button>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                
+            </main>
+
+<footer> <!--footer begins-->
+    <p>Copyright © 2024 Glazer Children's Museum</p>
+</footer> <!--footer ends-->
+<script>
+    function fetchExhibitData() {
+        fetch('/api/exhibits/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);  // Log the data to inspect what's being fetched
+                // Update this line to match the exhibit name exactly as it appears in your data
+                const targetExhibit = data.find(exhibit => exhibit.ex_name === "St. John's Children's Hospital");
+                console.log(targetExhibit);
+        
+                if (targetExhibit) {
+                    document.getElementById('exhibit-name').textContent = targetExhibit.ex_name;
+                    document.getElementById('exhibit-description').textContent = targetExhibit.ex_desc;
+                } else {
+                    console.log('Exhibit not found');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching exhibits:', error);
+                alert('Failed to fetch exhibits. Please check the console for more details.');
+            });
+    }
+    
+    document.addEventListener('DOMContentLoaded', fetchExhibitData);
+</script>
+</body>
+</div>
+</html>
+{% endblock %}

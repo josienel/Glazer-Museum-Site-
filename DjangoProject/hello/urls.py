@@ -56,6 +56,7 @@ urlpatterns= [
     path('exhibits/globecafe', views.globecafe, name='globecafe'),
     path('exhibits/lightcloud', views.lightcloud, name='lightcloud'),
     path('exhibits/icecream', views.icecream, name='icecream'),
+<<<<<<< HEAD
     path('exhibits/childrenshospital', views.childrenshospital, name='childrenshospital'),
     path('exhibits/watersjourney', views.watersjourney, name='watersjourney'),
     path('exhibits/kidsport', views.kidsport, name='kidsport'),
@@ -64,6 +65,16 @@ urlpatterns= [
     path('exhibits/tugboat', views.tugboat, name='tugboat'),
     path('exhibits/twinkletheater', views.twinkletheater, name='twinkletheater'),
     path('exhibits/vetclinic', views.vetclinic, name='vetclinic'),
+=======
+    path('exhibits/pizza', views.pizza, name='pizza'),
+    path('exhibits/kidsport', views.kidsport, name='kidsport'),
+    path('exhibits/publix', views.publix, name='publix'),
+    path('exhibits/childrenshospital', views.childrenshospital, name='childrenshospital'),
+    path('exhibits/tugboat', views.tugboat, name='tugboat'),
+    path('exhibits/twinkle', views.twinkle, name='twinkle'),
+    path('exhibits/vet', views.vet, name='vet'),
+    path('exhibits/joruney', views.journey, name='journey'),
+>>>>>>> d0e811ee (finished all exhibits)
     path('api/activities/', views.activity_data, name='activity_data'),
     path('api/exhibits/', views.exhibit_data, name='exhibit_data'),
 ]

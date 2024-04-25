@@ -201,6 +201,22 @@ def lightcloud(request):
     return render(request, 'hello/lightcloud.html')
 def icecream(request):
     return render (request, 'hello/icecream.html')
+def pizza(request):
+    return render(request, 'hello/pizza.html')
+def kidsport(request):
+    return render(request, 'hello/kidsport.html')
+def publix(request):
+    return render(request, 'hello/publix.html')
+def childrenshospital(request):
+    return render(request, 'hello/childrenshospital.html')
+def tugboat(request):
+    return render(request, 'hello/tugboat.html')
+def twinkle(request):
+    return render(request, 'hello/twinkle.html')
+def vet(request):
+    return render(request, 'hello/vet.html')
+def journey(request):
+    return render(request, 'hello/journey.html')
 
 
 #External Links
