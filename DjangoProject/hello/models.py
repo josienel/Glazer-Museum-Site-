@@ -18,7 +18,7 @@ class Activity(models.Model):
 
 @receiver(post_save, sender=Activity)
 def update_csv(sender, instance, created, **kwargs):
-    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/activities.csv'
+    file_path = 'hello/csv_files/activities.csv'
     
     # Open the file in read mode to check content and then append/update accordingly
     with open(file_path, mode='r', newline='') as file:
@@ -77,7 +77,7 @@ class Exhibit(models.Model):
     
 @receiver(post_save, sender=Exhibit)
 def update_exhibit_csv(sender, instance, created, **kwargs):
-    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/DBexhibits.csv'
+    file_path = 'hello/csv_files/DBexhibits.csv'
     try:
         with open(file_path, mode='r+', newline='') as file:
             reader = csv.reader(file)
