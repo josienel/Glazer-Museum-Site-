@@ -75,6 +75,21 @@ class Exhibit(models.Model):
     def __str__(self):
         return self.ex_name
     
+@receiver(post_save, sender=Exhibit)
+def update_exhibit_csv(sender, instance, created, **kwargs):
+    file_path = '/Users/danny/Desktop/Django/DjangoProject/hello/csv_files/DBexhibits.csv'
+    with open(file_path, mode='r+', newline='') as file:
+        reader = csv.reader(file)
+        header = next(reader)
+        data = [row for row in reader if row[0] != str(instance.exhibit_id)]
+    
+    with open(file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(header)
+        writer.writerows(data)
+        writer.writerow([str(instance.exhibit_id), instance.ex_name, instance.ex_desc])
+
+    
 #Connections model
 class Connection(models.Model):
     activity = models.ForeignKey(Activity, on_delete=models.CASCADE)

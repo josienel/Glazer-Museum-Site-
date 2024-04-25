@@ -1,6 +1,8 @@
 from django.urls import path
 from hello import views
 from .views import activity_data
+from .views import exhibit_data
+
 
 
 urlpatterns= [
@@ -51,6 +53,6 @@ urlpatterns= [
     path('exhibits/engworkshop', views.engworkshop, name='engworkshop'),
     path('exhibits/farm', views.farm, name='farm'),
     path('exhibits/firehouse', views.firehouse, name='firehouse'),
-    path('api/activities/', activity_data, name='activity_data'),
-
+    path('api/activities/', views.activity_data, name='activity_data'),
+    path('api/exhibits/', views.exhibit_data, name='exhibit_data'),
 ]

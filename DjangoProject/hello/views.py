@@ -8,6 +8,8 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 import csv
 from django.http import JsonResponse
+from .models import Exhibit
+
 
 
 #Update database
@@ -29,6 +31,15 @@ def activity_data(request):
         for row in reader:
             data.append(row)
     return JsonResponse(data, safe=False)
+
+def exhibit_data(request):
+    try:
+        exhibits = list(Exhibit.objects.values('exhibit_id', 'ex_name', 'ex_desc'))
+        return JsonResponse(exhibits, safe=False)
+    except Exception as e:
+        print("Error while fetching exhibit data from the database:", e)
+        return JsonResponse({'error': 'An error occurred'}, status=500)
+
 
 #Home page
 def home(request):
