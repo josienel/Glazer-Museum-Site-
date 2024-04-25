@@ -21,7 +21,6 @@ Play
   <style>
     body {
       overflow-x: hidden;
-      overflow: overlay;
     }
 
     .scroll-container {
@@ -111,10 +110,13 @@ Play
     text-align: center;
     margin: 20px;
     display: inline-block;
-    font-size: fit-content;
     height: 70%;
     z-index: 5;
     vertical-align:top;
+    }
+    .scroll-item h1 {
+      font-size: 18px; /* Reduced font size for better fitting */
+      white-space: normal; /* Allows text to wrap */
     }
 
     .scroll-item-lego{
