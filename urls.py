@@ -22,22 +22,6 @@ urlpatterns= [
     path('fantasy/', views.fantasy, name='fantasy'),
     path('communication/', views.communication, name='communication'),
     path('dramatic/', views.dramatic, name='dramatic'),
-    #path('artsmart/', views.artsmart, name='artsmart'),
-    #path('centralbank/', views.centralbank, name='centralbank'),
-    #path('bigjohn/', views.bigjohn, name='bigjohn'),
-    #path('childrenshospital/', views.childrenshospital, name='childrenshospital'),
-    #path('engworkshop/', views.engworkshop, name='engworkshop'),
-    #path('farm/', views.farm, name='farm'),
-    #path('firehouse/', views.firehouse, name='firehouse'),
-    #path('globalcafe/', views.globalcafe, name='globalcafe'),
-    #path('icecream/', views.icecream, name='icecream'),
-    #path('watersjourney/', views.watersjourney, name='watersjourney'),
-    #path('kidsport/', views.kidsport, name='kidsport'),
-    #path('lightcloud/', views.lightcloud, name='lightcloud'),
-    #path('pizza/', views.pizza, name='pizza'),
-    #path('publix/', views.publix, name='publix'),
-    #path('tugboat/', views.tugboat, name='tugboat'),
-    #path('twinkletheater/', views.twinkletheater, name='twinkletheater'),
-    #path('vetclinic/', views.vetclinic, name='vetclinic'),
+    
     
 ]
