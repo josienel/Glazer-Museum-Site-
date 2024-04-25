@@ -11,14 +11,21 @@ Play
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Standardizes the width so that translation to phone is easier -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=Madimi+One&family=Nabla&family=Protest+Revolution&family=Protest+Riot&family=Scope+One&family=Truculenta:opsz@12..72&display=swap" rel="stylesheet">
 
+  <title>Play Select</title>
   <!-- CSS styling for the HTML-->
-
+</head>
   <style>
+    .protest-riot-regular {
+      font-family: "Titan One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
     body {
       overflow-x: hidden;
     }
@@ -117,6 +124,8 @@ Play
     .scroll-item h1 {
       font-size: 18px; /* Reduced font size for better fitting */
       white-space: normal; /* Allows text to wrap */
+      top: 50%; /* Adjust to center text vertically */
+      left: 50%;
     }
 
     .scroll-item-lego{
@@ -365,8 +374,9 @@ Play
       top: 25%;
       transform: translate(-50%,0);
       color: white;
-      
+      font-family: "Titan One", sans-serif;
     }
+
     .title2{
       font-size: 30px;
       font-weight: bold;
@@ -519,13 +529,13 @@ h1{
   </style>
 
   <!-- HTML for page mostly consisting of divs -->
-
+<header>
   <div class="card">Activities
     <div class="play_heading">
       <h1 id="banner_play"></h1>
   </div>
   </div>
-</head>
+</header>
 <body>
 
 <!--Backgound color sections -->
