@@ -193,6 +193,12 @@ def farm(request):
     return render(request, 'hello/farm.html')
 def firehouse(request):
     return render(request, 'hello/firehouse.html')
+def globecafe(request):
+    return render(request, 'hello/globecafe.html')
+def lightcloud(request):
+    return render(request, 'hello/lightcloud.html')
+def icecream(request):
+    return render (request, 'hello/icecream.html')
 
 
 #External Links

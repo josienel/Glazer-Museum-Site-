@@ -53,6 +53,9 @@ urlpatterns= [
     path('exhibits/engworkshop', views.engworkshop, name='engworkshop'),
     path('exhibits/farm', views.farm, name='farm'),
     path('exhibits/firehouse', views.firehouse, name='firehouse'),
+    path('exhibits/globecafe', views.globecafe, name='globecafe'),
+    path('exhibits/lightcloud', views.lightcloud, name='lightcloud'),
+    path('exhibits/icecream', views.icecream, name='icecream'),
     path('api/activities/', views.activity_data, name='activity_data'),
     path('api/exhibits/', views.exhibit_data, name='exhibit_data'),
 ]
