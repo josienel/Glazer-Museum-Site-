@@ -12,17 +12,17 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" type= "text/css" href="{% static 'hello/help.css' %}">
   
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Linking Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-</head>
-<body>
-  
-  <!-- Navigation Menu -->
-  <div id="myNav" class="overlay">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- Linking Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+ </head>
+ <body>
+   
+   <!-- Navigation Menu -->
+   <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
       <!-- Links to various sections -->
@@ -34,84 +34,88 @@
     </div>
   </div>
 
-  <!-- Header -->
-  <div id="header">
-    Help Center
-  </div>
-
-  <!-- Hamburger Menu Icon -->
-  <span style="font-size:45px;cursor:pointer;position: absolute; top: 60px;left: 40px; color: white;" 
-  onclick="openNav()">&#9776;</span>
-
-  <!-- Main Content Section -->
-  <div align="center">
-    <div id="stuff">
-      <!-- Title -->
-      How can we assist you today?
-
-      <!-- Search Bar -->
-      <div class="search">
-        <input placeholder="Search..." type="text">
-        <button type="submit">Go</button>
-      </div>
-
-      <!-- Flip Cards for FAQ, Contact Us, and Navigation -->
-      <div align="center">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <!-- Front of the flip card with FAQ title -->
-              <p class="title">FAQ's</p>
-              <p>. . .</p>
-            </div>
-            <div class="flip-card-back">
-              <!-- Back of the flip card -->
-              <p class="title">BACK</p>
-              <p>Click Here</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Repeat similar structure for Contact Us and Navigation flip cards -->
-        <div class="flip-card1">
-          <div class="flip-card-inner1">
-            <div class="flip-card-front1">
-              <p class="title1">Contact Us</p>
-              <p>. . .</p>
-            </div>
-            <div class="flip-card-back1">
-              <p class="title1">BACK</p>
-              <p>Click Here</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card2">
-          <div class="flip-card-inner2">
-            <div class="flip-card-front2">
-              <p class="title2">Navigation</p>
-              <p>. . .</p>
-            </div>
-            <div class="flip-card-back2">
-              <p class="title2">BACK</p>
-              <p>Click Here</p>
+ 
+   <!-- Header -->
+   <div id="header">
+     Help Center
+   </div>
+ 
+   <!-- Hamburger Menu Icon -->
+   <span style="font-size:45px;cursor:pointer;position: absolute; top: 60px;left: 40px; color: white;" 
+   onclick="openNav()">&#9776;</span>
+ 
+   <!-- Main Content Section -->
+   <div align="center">
+     <div id="stuff">
+       <!-- Title -->
+       How can we assist you today?
+ 
+       <!-- Search Bar -->
+      <!--  <div class="search">
+         <input placeholder="Search..." type="text">
+         <button type="submit">Go</button>
+       </div> -->
+ 
+       <!-- Flip Cards for FAQ, Contact Us, and Navigation -->
+       <div align="center">
+         <div class="flip-card">
+           <div class="flip-card-inner">
+             <div class="flip-card-front">
+               <!-- Front of the flip card with FAQ title -->
+               <p class="title">FAQ's</p>
+               <p>. . .</p>
+             </div>
+             <div class="flip-card-back">
+               <!-- Back of the flip card -->
+               <p class="title">BACK</p>
+               <p>Click Here</p>
+             </div>
+           </div>
+         </div>
+ 
+         <!-- Repeat similar structure for Contact Us and Navigation flip cards -->
+         <a href="/contact" style="text-decoration: none; color: inherit;">
+          <div class="flip-card1">
+            <div class="flip-card-inner1">
+              <div class="flip-card-front1">
+                <p class="title1">Contact Us</p>
+                <p>. . .</p>
+              </div>
+              <div class="flip-card-back1">
+                <p class="title1">BACK</p>
+                <p>Click Here</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript functions for opening and closing the navigation menu -->
-  <script>
-    function openNav() {
-      document.getElementById("myNav").style.display = "block";
-    }
-
-    function closeNav() {
-      document.getElementById("myNav").style.display = "none";
-    }
-  </script>
-</body>
-</html>
-{% endblock %}
+        </a>
+        
+ 
+        <a href="/admin/" style="text-decoration: none; color: inherit;">
+          <div class="flip-card2">
+            <div class="flip-card-inner2">
+              <div class="flip-card-front2">
+                <p class="title2">Admin</p>
+                <p>. . .</p>
+              </div>
+              <div class="flip-card-back2">
+                <p class="title2">BACK</p>
+                <p>Click Here</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+ 
+   <!-- JavaScript functions for opening and closing the navigation menu -->
+   <script>
+     function openNav() {
+       document.getElementById("myNav").style.display = "block";
+     }
+ 
+     function closeNav() {
+       document.getElementById("myNav").style.display = "none";
+     }
+   </script>
+ </body>
+ </html>
+ {% endblock %}
