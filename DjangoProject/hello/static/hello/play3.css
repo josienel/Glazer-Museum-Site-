@@ -1,0 +1,239 @@
+/*fonts */
+.protest-riot-regular {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.scope-one-regular {
+  font-family: "Oswald", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  color: #e0e0e0;
+}
+
+.titan{
+  font-family: "Titan One", sans-serif;
+  color: #e0e0e0;
+}
+
+l {
+  line-height: 1.7; /* Adjust line spacing to 1.5 times the font size */
+}
+
+
+
+/* set background */
+body {
+  background-color: #b2d4d8;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+footer {
+  background-color: #b37de6;
+  border-radius: 50px;
+  border-style: double;
+  border-width: 10px;
+  border-color: #dab0f0;
+  width: 70rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+
+
+
+/* the whole box of Main title */
+.Title {
+  width: 70rem;
+  box-sizing: content-box;
+  margin: auto; /* Combined margin-left and margin-right */
+  border-radius: 1rem;
+  position: relative;
+  background-color: rgb(238, 236, 236);
+  background-image: white;
+  border-color:  #accdd2;
+  border-style:double;
+  border-width: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+/* inside top box */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Big title in main box */
+.maintitle {
+  font-family: "Titan One", sans-serif;
+  font-size: 6rem;
+  font-weight: bolder;
+  color:#b37de6;
+  margin-bottom: 20px;
+}
+/* nav as group */
+nav ul {
+  list-style-type: none;
+  padding: 12px; /* Added 'px' unit */
+  margin: 0;
+  word-spacing: 11rem;
+}
+
+/* nav as large outer scope individuals */
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* nav is smaller scope indivduals, influence to words and links */
+nav ul li a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #494949;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+
+
+
+/* the area that the picture of exhibit will sit in */
+.container {
+  width: 450px;
+  height: 274px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  border-color:  #accdd2;
+  border-style: solid;
+  border-width: 7px;
+  position: relative;
+  margin: 7% auto 0;
+  margin-left: 175px;
+  text-align: center;
+  overflow: hidden;
+}
+/* details of placement of image in base 2 */
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+
+}
+
+
+/* area for the exhibt info to be positioned */
+.playinfo {
+  width: 600px;
+  height: 354px;
+  border-radius: 30px;
+  background: rgb(238, 236, 236);
+  border-color:  #accdd2;
+  border-style: solid;
+  border-width: 7px;
+  position: center;
+  margin-left: calc(-10% + 0.53rem);
+  margin-top: calc(2% + 0.5rem);
+}
+
+/* title of box that has info and text refraining to play type*/
+.title {
+  font-family: "Titan One", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300px; 
+  color: #b37de6;
+  margin-bottom: 0.1px;
+}
+/* Words in the box Labeled Play Description */
+.description {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: larger;
+  color: #494949;
+}
+
+
+
+/* rule set for all of the bases in the body, base2,3,4 */
+.maininf {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4.6em;
+  row-gap: 0em;
+}
+
+
+
+/*    SCREEN ADJUSTMENTS  */
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  /* the whole box of Main title */
+  .Title, footer {
+    width: 90%;
+  }
+
+  /* area for the play description info to be positioned */
+  .playinfo {
+    font-size: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+
+  /* rule set for all of the bases in the body, base2,3,4 */
+  .maininf {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 2em;
+  }
+
+  /* the area that the picture of exhibit will sit in */
+  .container {
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 15px;
+  }
+  
+  /* Big title in main box */
+  .maintitle {
+    font-size: 4rem;
+  }
+  /* nav as group */
+  nav ul {
+    word-spacing: 0rem;
+  }
+}
+
+/* Additional adjustments for even smaller screens */
+@media only screen and (max-width: 480px) {
+   /* the whole box of Main title */
+  .Title {
+    padding: 5px; /* Adjust padding */
+  }
+
+  /* area for the play info to be positioned */
+  .playinfo {
+    margin-top: 10%;
+  }
+
+}
