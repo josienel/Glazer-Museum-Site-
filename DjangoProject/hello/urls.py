@@ -2,6 +2,7 @@ from django.urls import path
 from hello import views
 from .views import activity_data
 from .views import exhibit_data
+from .views import play_data
 
 
 
@@ -66,4 +67,10 @@ urlpatterns= [
     path('exhibits/joruney', views.journey, name='journey'),
     path('api/activities/', views.activity_data, name='activity_data'),
     path('api/exhibits/', views.exhibit_data, name='exhibit_data'),
+    path('api/play/', views.play_data, name='play_data'),
+    path('home/play1', views.play1, name='play1'),
+    path('home/play2', views.play2, name='play2'),
+    path('home/play3', views.play3, name='play3'),
+    path('home/play4', views.play4, name='play4'),
+    path('home/play5', views.play5, name='play5'),
 ]

@@ -9,6 +9,8 @@ from .forms import ContactForm
 import csv
 from django.http import JsonResponse
 from .models import Exhibit
+from .models import Play
+from .models import Activity
 
 
 
@@ -41,6 +43,10 @@ def exhibit_data(request):
     except Exception as e:
         print("Error while fetching exhibit data from the database:", e)
         return JsonResponse({'error': 'An error occurred'}, status=500)
+
+def play_data(request):
+    plays = list(Play.objects.values('play_id', 'play_type', 'play_desc'))
+    return JsonResponse(plays, safe=False)
 
 
 #Home page
@@ -82,6 +88,16 @@ def help(request):
 #Home
 def home(request):
     return render(request, "hello/home.html")
+def play1(request):
+    return render(request, 'hello/play1.html')
+def play2(request):
+    return render(request, 'hello/play2.html')
+def play3(request):
+    return render(request, 'hello/play3.html')
+def play4(request):
+    return render(request, 'hello/play4.html')
+def play5(request):
+    return render(request, 'hello/play5.html')
 
 #Contact
 def contact(request):
@@ -217,6 +233,10 @@ def vet(request):
     return render(request, 'hello/vet.html')
 def journey(request):
     return render(request, 'hello/journey.html')
+
+
+
+
 
 
 #External Links

@@ -47,21 +47,56 @@ def update_csv(sender, instance, created, **kwargs):
 
 
 #Play model
+from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+import csv
+
 class Play(models.Model):
     play_id = models.AutoField(primary_key=True)
     play_type = models.CharField(max_length=100)
     play_desc = models.TextField()
-    Physical = models.TextField(blank=True, null=True)
-    Social_Emotional = models.TextField(blank=True, null=True)
-    Sensory = models.TextField(blank=True, null=True)
-    Cognitive = models.TextField(blank=True, null=True)
-    Communication = models.TextField(blank=True, null=True)
+    physical = models.TextField(blank=True, null=True)
+    social_emotional = models.TextField(blank=True, null=True)
+    sensory = models.TextField(blank=True, null=True)
+    cognitive = models.TextField(blank=True, null=True)
+    communication = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.play_type
+
+@receiver(post_save, sender=Play)
+def update_play_csv(sender, instance, created, **kwargs):
+    file_path = 'hello/csv_files/play.csv'
+    try:
+        with open(file_path, mode='r+', newline='') as file:
+            reader = csv.reader(file)
+            header = next(reader)  # Ensure there is a header
+            existing_data = [row for row in reader if row and row[0] != str(instance.play_id)]
+
+        with open(file_path, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(header)
+            writer.writerows(existing_data)
+            if created or not any(row[0] == str(instance.play_id) for row in existing_data):
+                # Write new or updated entry
+                writer.writerow([
+                    str(instance.play_id),
+                    instance.play_type,
+                    instance.play_desc,
+                    instance.physical,
+                    instance.social_emotional,
+                    instance.sensory,
+                    instance.cognitive,
+                    instance.communication
+                ])
+    except Exception as e:
+        print(f"Failed to update play CSV for {instance.play_type} with error: {e}")
+
+
     
 
-
+#Exhibit Model
 class ExhibitManager(models.Manager):
     pass
 

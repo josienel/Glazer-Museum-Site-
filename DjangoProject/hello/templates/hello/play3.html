@@ -1,0 +1,110 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}
+Play3 Communication
+{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/play3.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dosis:wght@200..800&family=Inter:wght@100..900&family=Madimi+One&family=Nabla&family=Protest+Revolution&family=Protest+Riot&family=Scope+One&family=Truculenta:opsz@12..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+
+    <title>Communication Play</title><!-- this page should be linked to the communication play button on the homescreen -->
+
+
+</head>
+<div class="background">
+
+<body>
+
+        <header>
+
+                <div class="Title">
+                    <div class="header-content">
+                        <h1 id="playtype" class="maintitle"></h1>
+                    </div>
+                </div>
+            
+        </header>
+            <main>
+                    <div class="maininf">
+                        <div class="container">
+                            <img src="{% static 'images/play.jpg' %}" alt="play">
+                        </div>
+                            
+
+                        <div class="playinfo">
+                            <div class="content">
+                                <div align  = "center">
+                                <p class="title" >Play Description</p></div>
+                                <p id='play-description' class="description"></p>
+                            </div>
+                        </div>
+                            
+
+                        </div>
+                    </div>
+                
+            </main>
+
+
+                <br><br><br>
+
+          <!-- Footer section -->
+    <footer>
+        <div align="center">
+          <!-- Heading for Our Mission -->
+          <font size="+3">
+            <div class="titan">Our Mission</div>
+          </font>
+        </div>
+        <p>
+          <!-- Description of Our Mission -->
+          <font size="+2">
+            <div class="oswald">
+            <div align="center"><l>We create and foster engaging, impactful PLAY experiences for children and families to 
+              learn and thrive. Our vision is a community that values PLAY as the foundation for the learning and development 
+              of children and families across generations.</l></div>
+            </div>
+          </font>
+        </p>
+      </footer>
+      <script>
+        function fetchPlayData() {
+            fetch('/api/play/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);  // Log the data to inspect what's being fetched
+                    const typePlay = data.find(play => play.play_type === "Communication");
+                    console.log(typePlay); // Log fetched data
+    
+                    if (typePlay) {
+                        document.getElementById('playtype').textContent = typePlay.play_type;
+                        document.getElementById('play-description').textContent = typePlay.play_desc;
+                    } else {
+                        console.log('Play data not found');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    alert('Failed to fetch data. Please check the console for more details.');
+                });
+        }
+        document.addEventListener('DOMContentLoaded', fetchPlayData);
+    </script>
+    </div> 
+
+
+
+</body>
+</div>
+</html>
+{% endblock %}
