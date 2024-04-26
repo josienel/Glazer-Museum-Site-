@@ -139,3 +139,39 @@ class Connection(models.Model):
     def __str__(self):
         return f"Connection: Activity {self.activity_id}, Play {self.play_id}, Exhibit {self.exhibit_id}"
 
+@receiver(post_save, sender=Connection)
+def update_connections_csv(sender, instance, created, **kwargs):
+    file_path = 'hello/csv_files/connections.csv'
+    
+    # Define the header for the CSV file
+    header = ['activity_id', 'play_id', 'exhibit_id']
+
+    # Prepare the data for the current instance
+    new_data = [str(instance.activity_id), str(instance.play_id), str(instance.exhibit_id)]
+
+    # Open the file and read existing data
+    try:
+        with open(file_path, mode='r', newline='') as file:
+            reader = csv.reader(file)
+            data = list(reader)
+    except FileNotFoundError:
+        # If the file doesn't exist, create it with the header
+        data = [header]
+
+    # If the instance is newly created, append the new data
+    if created:
+        data.append(new_data)
+    else:
+        # If the instance already exists, find and update the corresponding row
+        for row in data:
+            if row[0] == str(instance.activity_id):
+                row[:] = new_data
+                break
+        else:
+            # If no corresponding row is found, append the new data
+            data.append(new_data)
+
+    # Write the updated data back to the CSV file
+    with open(file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(data)
