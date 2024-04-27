@@ -67,8 +67,9 @@ Childrens Hospital Exhibit
                             <div class="toPLAY">
                                 <div align  = "Center">
                             <p class="playTITLE">Activities?</p></div>
-                              <button id="activity1" class="btn" onclick="navigateToLink(event, 'link1.html')"></button>
-                              <button id="activity2" class="btn" onclick="navigateToLink(event, 'link2.html')"></button>
+                              <button id="activity1" class="btn" onclick="window.location.href='{% url 'eating_the_rainbow' %}'">Sensory</button> 
+                              <button id="activity2" class="btn" onclick="window.location.href='{% url 'nutrition' %}'">Cognitive</button> 
+                              <button id="activity3" class="btn" onclick="window.location.href='{% url 'how_high' %}'">Cognitive</button> 
                             </div>
                             
 

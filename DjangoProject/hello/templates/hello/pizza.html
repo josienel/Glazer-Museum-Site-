@@ -66,12 +66,9 @@ Pizza Place Exhibit
                             <div class="toPLAY">
                                 <div align  = "Center">
                             <p class="playTITLE">Activities?</p></div>
-                              <button id="activity1" class="btn" onclick="navigateToLink(event, 'link1.html')"></button>
-                              <button id="activity2" class="btn" onclick="navigateToLink(event, 'link2.html')"></button>
-                              <button id="activity3" class="btn" onclick="navigateToLink(event, 'link3.html')"></button>
-                                <button id="activity4" class="btn" onclick="navigateToLink(event, 'link3.html')"></button>
-                                <button id="activity5" class="btn" onclick="navigateToLink(event, 'link3.html')"></button>
-
+                              <button id="activity1" class="btn" onclick="window.location.href='{% url 'advanced_pizza_making' %}'">Physical</button> 
+                              <button id="activity2" class="btn" onclick="window.location.href='{% url 'order_up' %}'">Social</button> 
+                              <button id="activity3" class="btn" onclick="window.location.href='{% url 'nutrition' %}'">Cognitive</button> 
                             </div>
                             
 
