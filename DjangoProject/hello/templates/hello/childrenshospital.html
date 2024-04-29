@@ -51,7 +51,7 @@ Childrens Hospital Exhibit
             <main>
                     <div class="maininf">
                         <div class="Base2">
-                            <img src="ART-SMART.jpg" alt="Children's Hospital">
+                            <img src="{% static 'images/ART-SMART.jpg' %}" alt="Children's Hospital">
                         </div>
                             
 
@@ -67,9 +67,9 @@ Childrens Hospital Exhibit
                             <div class="toPLAY">
                                 <div align  = "Center">
                             <p class="playTITLE">Activities?</p></div>
-                              <button id="activity1" class="btn" onclick="window.location.href='{% url 'eating_the_rainbow' %}'">Sensory</button> 
-                              <button id="activity2" class="btn" onclick="window.location.href='{% url 'nutrition' %}'">Cognitive</button> 
-                              <button id="activity3" class="btn" onclick="window.location.href='{% url 'how_high' %}'">Cognitive</button> 
+                              <button id="activity1" class="btn" onclick="window.location.href='{% url 'eating_the_rainbow' %}'"><nobr>Eat the Rainbow</nobr></button> 
+                              <button id="activity2" class="btn" onclick="window.location.href='{% url 'nutrition' %}'">Nutrition</button> 
+                              <button id="activity3" class="btn" onclick="window.location.href='{% url 'how_high' %}'">How High</button> 
                             </div>
                             
 
